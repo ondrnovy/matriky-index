@@ -1,7 +1,18 @@
 archiv: "portafontium"
 kniha: "maly-bor-02"
 nazev: "Malý Bor 02"
+druh: "matrika"
 farnost: "Malý Bor"
-obsah: "snímek = číslo souboru Porta fontium s příponou (např. 0100-o); zatím jen jednotlivé zápisy"
+roky: "1670–1703"
+obsah: "N, O, Z 1670–1703 (209 souborů: N přípona -n, O soubory 1340–1820, Z -z); OCR jen oddíl O; snímek = číslo souboru Porta fontium (v precteno.tsv s příponou, např. 0100-o)"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-02"
 poznamka: "zápisy přečtené při práci na rodokmenu; jen vybrané zápisy, ne celá kniha"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "2c7d420e-1ffc-4d91-a2a7-5234dcdabe21"
+  model: "Kurrent (German, Czech)"
+  datum: "2026-11-13"
+  export: "portafontium-maly-bor-02-o.pagexml.zip"
+  stranek: 49
+  radku: 3565
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
