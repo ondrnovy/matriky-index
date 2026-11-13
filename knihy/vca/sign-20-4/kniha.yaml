@@ -1,0 +1,20 @@
+archiv: "vca"
+kniha: "sign-20-4"
+nazev: "Červený Kostelec N, Z, O 1785–1814, sign. 20-4 (kód DTDAV6LU)"
+druh: "matrika"
+farnost: "Červený Kostelec"
+roky: "1785–1814"
+obsah: "N, Z, O 1785–1814 po obcích; snímky 1–149; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
+url: "https://aron.vychodoceskearchivy.cz/apu/df9d1ae5-8641-4ce5-83f6-c5ff756dc1d7"
+ocr:
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "06ed6490-1c61-4e08-a0c5-550380880a8e"
+  model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
+  datum: "2026-11-13"
+  export: "ckostelec-20-4.pagexml.zip"
+  snimky: "1–149"
+  stranek: 149
+  radku: 62302
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

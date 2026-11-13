@@ -196,6 +196,11 @@ BOOKS = {
                        obsah="po obcích; OCR snímky 74–87 (oddíl Pulice sn. 76–85, pag. 198–217); soubor = snímek; "
                              "šedotónové JPEG 4078 px",
                        url="https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip", prefix="dob2612", delitel=1),
+    "sign-20-4": dict(archiv="vca", nazev="Červený Kostelec N, Z, O 1785–1814, sign. 20-4 (kód DTDAV6LU)",
+                      farnost="Červený Kostelec", roky="1785–1814",
+                      obsah="N, Z, O 1785–1814 po obcích; snímky 1–149; soubor = snímek; OCR ze šedotónových JPEG 2400 px",
+                      url="https://aron.vychodoceskearchivy.cz/apu/df9d1ae5-8641-4ce5-83f6-c5ff756dc1d7", prefix="ckostelec204",
+                      delitel=1),
     "sign-1309": dict(archiv="vca", nazev="Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)",
                       farnost="Litomyšl", roky="10/1850–1857",
                       obsah="N Litomyšl město a předměstí (Dolní a Horní předměstí, Lány, Zahájí, Záhradí); snímky 1–395; "
@@ -436,6 +441,7 @@ EXPORTS = {
     "dobruska-26-1-26-12": (["sign-26-1", "sign-26-12"], "6543ac92-3886-4503-b2f3-e973817b2f34", "Kurrent (German, Czech)",
                             "2026-11-02"),
     "litomysl-n-1309": (["sign-1309"], "9cf4c19e-3582-41cf-82c8-c4cb45510542", "Kurrent (German, Czech)", "2026-11-02"),
+    "ckostelec-20-4": (["sign-20-4"], "06ed6490-1c61-4e08-a0c5-550380880a8e", "Kurrent (German, Czech)", "2026-11-13"),
     "kurrent-2741-2745-481": (["o-2741", "o-2745", "z-481"], "8b22ff4d-4bfb-48ce-a789-7644f374dc32",
                               "Kurrent (German, Czech)", "2026-11-02"),
     "bohdikov-su-xiv-5": (["su-xiv-5"], "161c8c33-983b-4c9a-87cd-36473e311b18", "Czech Handwritten", "2026-11-02"),
