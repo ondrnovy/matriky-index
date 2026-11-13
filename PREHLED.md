@@ -2,17 +2,19 @@
 
 Stav k 13. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **849 knih** (matrika 775, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **857 knih** (matrika 783, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **8 758 stran** převedených strojově (PERO OCR), **1 593 988 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **22 347 zápisů přečtených očima**: narození 9889, sňatky 8520, úmrtí 3192, převody gruntů 49, soupisy 193, jiné 475
+- **22 376 zápisů přečtených očima**: narození 9904, sňatky 8524, úmrtí 3202, převody gruntů 49, soupisy 193, jiné 475
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
-## SOA Plzeň – Porta fontium (101)
+## SOA Plzeň – Porta fontium (109)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
 | [Blovice 02](https://www.portafontium.eu/register/soap-pn/blovice-02) | matrika | 1688–1720 | 135 | 9872 |  |
+| [Čachrov 17](https://www.portafontium.eu/register/soap-pn/cachrov-17) | matrika |  |  |  | 3 (Z 3) |
+| [Čachrov 26](https://www.portafontium.eu/register/soap-pn/cachrov-26) | matrika |  |  |  | 4 (N 3 Z 1) |
 | [Černošín 03](https://www.portafontium.eu/register/soap-pn/cernosin-03) | matrika | 1731–1758 | 171 | 26521 | 17 (J 5 N 5 Z 7) |
 | [Černošín 04](https://www.portafontium.eu/register/soap-pn/cernosin-04) | matrika | 1759–1784 |  |  | 1 (J 1) |
 | [Chotěšov 29](https://www.portafontium.eu/register/soap-pn/chotesov-29) | matrika |  | 69 | 31878 |  |
@@ -22,6 +24,9 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dnešice 01](https://www.portafontium.eu/register/soap-pn/dnesice-01) | matrika | 1685–1735 | 190 | 16490 |  |
 | [Dnešice 02](https://www.portafontium.eu/register/soap-pn/dnesice-02) | matrika | 1735–1770 | 33 | 4242 | 9 (J 7 N 2) |
 | [Dolní Lukavice 01](https://www.portafontium.eu/register/soap-pn/dolni-lukavice-01) | matrika | 1682–1765 | 368 | 40916 |  |
+| [Hlavňovice 01](https://www.portafontium.eu/register/soap-pn/hlavnovice-01) | matrika |  |  |  | 1 (O 1) |
+| [Hlavňovice 05](https://www.portafontium.eu/register/soap-pn/hlavnovice-05) | matrika |  |  |  | 12 (N 6 O 1 Z 5) |
+| [Hlavňovice 07](https://www.portafontium.eu/register/soap-pn/hlavnovice-07) | matrika |  |  |  | 1 (O 1) |
 | [Horažďovice 05](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1699–1747 | 195 | 28062 |  |
 | [Horažďovice 05 – zemřelí a oddaní](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1699–1747 | 121 | 14410 | 76 (J 1 O 75) |
 | [horazdovice-k1558](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1558) | pozemková kniha |  |  |  | 5 (P 5) |
@@ -88,6 +93,9 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nepomuk 04](https://www.portafontium.eu/register/soap-pn/nepomuk-04) | matrika |  |  |  | 1 (O 1) |
 | [Přeštice 02](https://www.portafontium.eu/register/soap-pn/prestice-02) | matrika | 1722–1756 | 143 | 15779 | 3 (N 1 O 2) |
 | [Přeštice 38](https://www.portafontium.eu/register/soap-pn/prestice-38) | matrika |  | 83 | 19866 |  |
+| [Velhartice 08](https://www.portafontium.eu/register/soap-pn/velhartice-08) | matrika |  |  |  | 6 (N 4 O 1 Z 1) |
+| [Velhartice 17](https://www.portafontium.eu/register/soap-pn/velhartice-17) | matrika |  |  |  | 1 (N 1) |
+| [Velhartice 21](https://www.portafontium.eu/register/soap-pn/velhartice-21) | matrika |  |  |  | 1 (N 1) |
 | [Velký Bor 01](https://www.portafontium.eu/register/soap-pn/velky-bor-01) | matrika | 1707–1754 | 226 | 32078 | 13 (N 5 O 4 Z 4) |
 | [Velký Bor 02](https://www.portafontium.eu/register/soap-pn/velky-bor-02) | matrika | 1746–1771 | 159 | 25028 | 2 (N 2) |
 | [Velký Bor 03](https://www.portafontium.eu/register/soap-pn/velky-bor-03) | matrika |  |  |  | 2 (N 2) |
@@ -789,16 +797,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -811,6 +809,16 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## nacr (10)
 
