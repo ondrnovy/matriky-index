@@ -7,11 +7,13 @@ roky: "1812–1857"
 obsah: "O 5/1812–1857 (Rokytnice, Hanička, Panské Pole, Julinčino Údolí, Údolíčko, Rýnek, Václavova Seč), německy; snímky 1–171; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/0484f35a-faa1-428b-b53c-b3fbe9171eba"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "22584668-c138-4a53-a0e9-b6d76bc57563"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-smola-o-destne-rokytnice-uhrinov-nmnm.pagexml.zip"
+  snimky: "1–171"
   stranek: 171
   radku: 30902
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

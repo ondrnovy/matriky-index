@@ -7,11 +7,13 @@ roky: ""
 obsah: "rejstřík (index); snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/chotesov-29"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "b27e5513-73dd-4f80-87d3-4f36dd2f8102"
   model: "Czech Handwritten"
   datum: "2026-11-06"
   export: "indexy-prestice38-merklin30-chotesov29-P8.pagexml.zip"
+  snimky: "1–69"
   stranek: 69
   radku: 31878
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

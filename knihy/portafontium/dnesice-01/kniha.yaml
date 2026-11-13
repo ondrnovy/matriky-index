@@ -6,11 +6,13 @@ roky: "1685–1735"
 obsah: "N 1685–1735 (snímky 3–151), O 1685–1735 (152–192), Z 1685–1735 (193–247, neOCRováno)"
 url: "https://www.portafontium.eu/register/soap-pn/dnesice-01"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "c1785e53-4a1c-40f7-a924-7d219217bf15"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
   export: "dnesice-01.zip"
+  snimky: "3–192"
   stranek: 190
   radku: 16490
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

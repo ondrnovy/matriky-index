@@ -7,11 +7,13 @@ roky: "1772–1778"
 obsah: "po obcích, u každé N, O, Z (Bušín str. 1–72); OCR snímky 1–177; soubor = snímek; obrázky v polovičním rozlišení, šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "2d56f6dc-b89c-49a9-9e93-099de7a9306b"
   model: "Czech Handwritten"
   datum: "2026-11-02"
   export: "ruda-su-xiv-4-14.pagexml.zip"
+  snimky: "1–177"
   stranek: 177
   radku: 33733
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

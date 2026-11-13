@@ -6,11 +6,13 @@ roky: "1840–1858"
 obsah: "N 1841–1858 s rejstříkem, O 1840–1853, Z 1843–1853; OCR snímky 2–13 (1 a 14 desky); soubor = snímek, obrázek oříznutý na knihu"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "3ffd9a97-1756-472a-bc3f-84333d8b10fc"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
   export: "pristoupim-noz726-noz727.zip"
+  snimky: "2–13"
   stranek: 12
   radku: 2799
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

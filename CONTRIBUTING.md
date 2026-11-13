@@ -24,7 +24,9 @@ pull requestu, který knihu dočte, napište `Closes #<číslo issue>`; GitHub i
   [README](README.md#precteno-tsv--zápisy-přečtené-očima). Do `cetl` napište, kdo četl a kdy, např.
   `Jan Novák 2026-11-05`; s jazykovým modelem i jeho id a effort, např.
   `Jan Novák + claude-opus-5-5/xhigh 2026-11-05` (viz [Kdo četl](README.md#kdo-četl)).
-- `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md).
+- `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md). Strojový text z jiného
+  nástroje nebo modelu (Transkribus, ScribbleSense) jako další čtení `ocr-<cteni>.tsv` a `stranky-<cteni>.tsv` vedle
+  něj – stávající čtení se nemaže ani nepřepisuje; nástroj, model, nastavení a snímky do `ocr` v `kniha.yaml`.
 - `opravy.tsv` – opravy strojového čtení, nástrojem `tools/opravy.py`.
 - `vyklad.tsv` – chyby písaře (špatné jméno, věk, vztah), které dokazují jiné zápisy v indexu, nástrojem
   `tools/vyklad.py`; formát a pravidla v [README](README.md#vykladtsv--chyby-písaře).

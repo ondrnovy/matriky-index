@@ -8,19 +8,24 @@ obsah: "latinsky, souvislý text; N 1721–1750 asi sn. 1–99 (1738 ≈ sn. 56,
 url: "https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a"
 poznamka: "OCR snímků 1–319 ze šedotónových JPEG 2400 px ve dvou dokumentech PERO; zápisy přečtené očima v precteno.tsv"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "b225448f-56c8-422e-8589-f2e2b2c30dfe"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-10"
   export: "vca-novy-hradek-117-1-sn100.pagexml.zip"
+  snimky: "100–319"
   stranek: 220
   radku: 28832
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "aadba446-b0a7-4df8-9cc6-3796925b8243"
   model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
   datum: "2026-11-12"
   export: "vca-novy-hradek-117-1-sn1.pagexml.zip"
+  snimky: "1–99"
   stranek: 99
   radku: 10612
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

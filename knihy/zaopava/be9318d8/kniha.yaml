@@ -7,11 +7,13 @@ roky: "1701–1757"
 obsah: "N 1701–1757 asi sn. 1–249 (sn. 200 = I 1749), O asi sn. 250–363 (sn. 360 = I 1747), Z dál; OCR snímky 1–80 (N 1701–1720), 160–228 (N X 1738 – asi 1757), 250–372 (O 1701–1757) a 373–540 (Z 1701 – asi 1740); soubor = snímek; poloviční rozlišení, šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "59dc2bb6-c7b9-4457-a9a1-4dd2d84eba46, 6e04fb07-1adc-4450-ac97-c3c0d7f458c1, 5b1e5314-fc04-48ac-a7d5-fe111c9e8cef, 6323e93c-6924-47eb-9a8a-7ec850109f68"
   model: "Czech Handwritten"
   datum: "2026-11-03"
   export: "ruda-1701-1757.pagexml.zip"
+  snimky: "1–80, 160–228, 250–540"
   stranek: 440
   radku: 59884
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

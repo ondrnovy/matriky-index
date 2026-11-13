@@ -25,7 +25,9 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
   sezení Claude Code (`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole `effort`); samotné „Claude“ kontrola odmítne.
 - Nová kniha: `kniha.yaml` s poli `archiv`, `kniha`, `nazev`, `url`, `roky`, `farnost`, `obsah`; `mapa`, pokud knihu má
   Mapa matrik.
-- Strojový text z PERO importuj nástrojem `tools/pero_import.py` (doplň `BOOKS` a `EXPORTS`).
+- Strojový text z PERO importuj nástrojem `tools/pero_import.py` (doplň `BOOKS` a `EXPORTS`). Čtení jiným
+  nástrojem nebo modelem (Transkribus, ScribbleSense) přidej jako další `ocr-<cteni>.tsv` vedle
+  stávajícího, nic nepřepisuj; do `kniha.yaml` k němu nástroj, model, nastavení a snímky.
 - Řádky, které už jsou v `main`, nikdy neměň ani nemaž – cizí ani vlastní. Jiné nebo přesnější čtení = nový řádek
   nebo oprava přes `tools/opravy.py`.
 - `PREHLED.md` necommituj; po sloučení ho z dat v `main` přegeneruje GitHub Action.

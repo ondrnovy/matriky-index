@@ -6,11 +6,13 @@ roky: "1839–1889"
 obsah: "OCR snímky 24–38 (O asi 1846–1856); soubor = snímek; zápisy jsou psané svisle, OCR je z obrázků otočených o 90° po směru hodinových ručiček (soubor -r)"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/o-235"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "00b4fec1-aa87-4774-92ec-bd38077992e2"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
   export: "zidovske-o235-o2434-otocene.zip"
+  snimky: "24–38"
   stranek: 15
   radku: 2302
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

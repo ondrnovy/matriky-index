@@ -2,13 +2,13 @@
 
 Stav k 13. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **767 knih** (matrika 693, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
-- **8 776 stran** převedených strojově (PERO OCR), **1 587 051 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **22 169 zápisů přečtených očima**: narození 9800, sňatky 8479, úmrtí 3164, převody gruntů 49, soupisy 193, jiné 455
+- **766 knih** (matrika 692, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **8 758 stran** převedených strojově (PERO OCR), **1 592 242 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **22 174 zápisů přečtených očima**: narození 9800, sňatky 8480, úmrtí 3164, převody gruntů 49, soupisy 193, jiné 459
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
-## SOA Plzeň – Porta fontium (101)
+## SOA Plzeň – Porta fontium (100)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -17,13 +17,12 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Chotěšov 29](https://www.portafontium.eu/register/soap-pn/chotesov-29) | matrika |  | 69 | 31878 |  |
 | [Chříč 12 (Slatina, Březsko: N 1848–1891)](https://www.portafontium.eu/register/soap-pn/chric-12) | matrika | 1848–1891 |  |  | 2 (N 2) |
 | [Chříč 24 (Dolany, Hlince, Ptyč: Z 1828–1946)](https://www.portafontium.eu/register/soap-pn/chric-24) | matrika | 1828–1946 |  |  | 1 (Z 1) |
-| [Čížkov 01](https://www.portafontium.eu/register/soap-pn/cizkov-01) | matrika | 1701–1720 | 61 | 4999 |  |
+| [Čížkov 01](https://www.portafontium.eu/register/soap-pn/cizkov-01) | matrika | 1701–1720 | 60 | 4999 |  |
 | [Dnešice 01](https://www.portafontium.eu/register/soap-pn/dnesice-01) | matrika | 1685–1735 | 190 | 16490 |  |
 | [Dnešice 02](https://www.portafontium.eu/register/soap-pn/dnesice-02) | matrika | 1735–1770 | 33 | 4242 | 9 (J 7 N 2) |
 | [Dolní Lukavice 01](https://www.portafontium.eu/register/soap-pn/dolni-lukavice-01) | matrika | 1682–1765 | 368 | 40916 |  |
-| [Horažďovice 05](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1699–1747 | 195 | 20189 |  |
-| [Horažďovice 05 (druhé OCR modelem Kurrent)](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1737–1747 | 66 | 7873 |  |
-| [Horažďovice 05 – zemřelí a oddaní](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1699–1747 | 121 | 13989 | 74 (O 74) |
+| [Horažďovice 05](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1699–1747 | 195 | 28062 |  |
+| [Horažďovice 05 – zemřelí a oddaní](https://www.portafontium.eu/register/soap-pn/horazdovice-05) | matrika | 1699–1747 | 121 | 14410 | 76 (J 1 O 75) |
 | [horazdovice-k1558](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1558) | pozemková kniha |  |  |  | 5 (P 5) |
 | [horazdovice-k1559](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1559) | pozemková kniha |  |  |  | 1 (P 1) |
 | [horazdovice-k1562](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1562) | pozemková kniha |  |  |  | 5 (P 5) |
@@ -67,7 +66,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Liblín 01 (Liblín, Bujesily, Chockov, Olešná: N 1822–1843)](https://www.portafontium.eu/register/soap-pn/liblin-01) | matrika | 1822–1843 |  |  | 1 (N 1) |
 | [Liblín 05 (Liblín, Bujesily, Chockov, Olešná, …: N 1806–1821)](https://www.portafontium.eu/register/soap-pn/liblin-05) | matrika | 1806–1821 |  |  | 2 (N 2) |
 | [Liblín 11 (Liblín, Bujesily, Chockov, Olešná: O 1806–1836)](https://www.portafontium.eu/register/soap-pn/liblin-11) | matrika | 1806–1836 |  |  | 2 (O 2) |
-| [Malý Bor 02](https://www.portafontium.eu/register/soap-pn/maly-bor-02) | matrika |  |  |  | 9 (N 6 O 3) |
+| [Malý Bor 02](https://www.portafontium.eu/register/soap-pn/maly-bor-02) | matrika | 1670–1703 | 49 | 3565 | 12 (J 3 N 6 O 3) |
 | [Malý Bor 03](https://www.portafontium.eu/register/soap-pn/maly-bor-03) | matrika | 1704–1726 | 98 | 8664 | 77 (J 1 N 27 O 32 Z 17) |
 | [Malý Bor 04](https://www.portafontium.eu/register/soap-pn/maly-bor-04) | matrika | 1727–1744 | 116 | 12230 | 305 (J 2 N 273 O 24 Z 6) |
 | [Malý Bor 05](https://www.portafontium.eu/register/soap-pn/maly-bor-05) | matrika | 1745–1763 | 174 | 26479 | 270 (J 1 N 259 O 5 Z 5) |
@@ -134,7 +133,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 1249 (poř.č. 2109), 1710-1761 – Dolní Újezd NOZ](https://aron.vychodoceskearchivy.cz/apu/101361cd-0328-4eba-a7d0-a4caf32e7567) | matrika |  |  |  | 4 (N 2 O 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 1704 (poř.č. 9046), 1806-1823](https://aron.vychodoceskearchivy.cz/apu/1091221e-03f0-4a16-8fec-847486b18675) | matrika | 1806–1823 |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 26-10 (poř.č. 1751), 1806-1843](https://aron.vychodoceskearchivy.cz/apu/11288369-9a18-4ffe-bd74-ddb8dd721cc5) | matrika |  |  |  | 2 (O 2) |
-| [Sbírka matrik Východočeského kraje, sign.: 120-1 (poř.č. 8227), 1723-1797 – Opočno NOZ (Opočno, Podchlumí, Pohoří, Puličky, Semechnice, Trnov)](https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45) | matrika | 1723–1797 | 490 | 85553 | 85 (J 2 N 54 O 11 Z 18) |
+| [Sbírka matrik Východočeského kraje, sign.: 120-1 (poř.č. 8227), 1723-1797 – Opočno NOZ (Opočno, Podchlumí, Pohoří, Puličky, Semechnice, Trnov)](https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45) | matrika | 1723–1797 | 490 | 86215 | 85 (J 2 N 54 O 11 Z 18) |
 | [Sbírka matrik Východočeského kraje, sign.: 56-3 (poř.č. 3937), 1804-1863](https://aron.vychodoceskearchivy.cz/apu/139956a9-30ea-4b7f-815b-09725b1f8d96) | matrika |  |  |  | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-5 (poř.č. 3317), 1784-1794](https://aron.vychodoceskearchivy.cz/apu/13e7e081-a5e5-4b3b-9946-e71389e3c8b9) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 25-2 (poř.č. 1681), 6.1808-4.1839](https://aron.vychodoceskearchivy.cz/apu/1697219c-42e0-497c-b459-055488bb208e) | matrika |  |  |  | 4 (N 4) |
@@ -328,7 +327,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 53-31 (poř.č. 3690), 1835-1847](https://aron.vychodoceskearchivy.cz/apu/f700e507-6ab1-4b2c-932b-88c02b03df39) | matrika | 1835–1847 |  |  | 1 (N 1) |
 | [Okresní úřad Rychnov nad Kněžnou I, inv. č.: 2279, 1869 – Petrovice - Velké Petrovice čp. 1-41](https://aron.vychodoceskearchivy.cz/apu/f746dc94-3c93-40ac-af5e-004ab28415c5) | sčítání lidu | 1869 |  |  | 1 (S 1) |
 | [Okresní úřad Rychnov nad Kněžnou I, inv. č.: 2281, 1890 – Petrovice - Velké Petrovice čp. 1 - 48 obydlená obecní kůlna čp. 0](https://aron.vychodoceskearchivy.cz/apu/f77dadc3-d324-4fc6-a48b-dd253a057052) | sčítání lidu | 1890 |  |  | 1 (S 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 171-2797 (poř.č. 12181), 1784-1837 – Velký Uhřínov O](https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643) | matrika | 1784–1837 | 39 | 7634 | 8 (O 8) |
+| [Sbírka matrik Východočeského kraje, sign.: 171-2797 (poř.č. 12181), 1784-1837 – Velký Uhřínov O](https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643) | matrika | 1784–1837 | 39 | 8177 | 8 (O 8) |
 | [Sbírka matrik Východočeského kraje, sign.: 181-3503 (poř.č. 12669), 1851-1894 – římskokatolická matrika ODDANÝCH, římskokatolický index ODDANÝCH, Vysoké Veselí (3.1851-10.1894), Veselská Lhota (2.1851-10.1894), Velešice (9.1851-11.1893), Hrobičany (do 11.1894), Sběř (do 5.1894), Volanice (10.1851-5.1894)](https://aron.vychodoceskearchivy.cz/apu/f806a3d0-3902-4d7b-8f09-ebaf8bdebb46) | matrika | 1851–1894 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 14-2 (poř.č. 709), 1799-1827](https://aron.vychodoceskearchivy.cz/apu/f8150aa3-5756-4adf-9229-49146d4763b9) | matrika |  |  |  | 14 (N 14) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-5 (poř.č. 11267), 1812-1872](https://aron.vychodoceskearchivy.cz/apu/f816fc1e-f00f-4609-819e-02e11e8765a7) | matrika |  |  |  | 6 (N 2 O 2 Z 2) |
@@ -755,21 +754,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## nacr (10)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
-
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -792,6 +776,21 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
 | [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
 | [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
+## nacr (10)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
 
 ## zaopava (42)
 

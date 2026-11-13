@@ -6,11 +6,13 @@ roky: "1682–1765"
 obsah: "N 1682–1765 (snímky 3–370); soubor = snímek×10+1 (354–358: +2)"
 url: "https://www.portafontium.eu/register/soap-pn/dolni-lukavice-01"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "f576fcb5-bc48-406e-b75a-5a0a3b1e2d2c"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
   export: "dolni-lukavice-01.pagexml.zip"
+  snimky: "3–370"
   stranek: 368
   radku: 40916
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

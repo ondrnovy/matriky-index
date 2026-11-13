@@ -7,11 +7,13 @@ roky: "1690–1744"
 obsah: "Z 1690–1744 (snímky 3–219); snímek 3 = str. 52–53"
 url: "https://www.portafontium.eu/register/soap-pn/kasejovice-07"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "36f52f6b-4218-4534-bc8e-81fd5f392349"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-04"
   export: "kasejovice-07-z1690-1744.pagexml.zip"
+  snimky: "3–219"
   stranek: 217
   radku: 21858
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

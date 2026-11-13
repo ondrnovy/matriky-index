@@ -7,11 +7,13 @@ roky: "1808–1839"
 obsah: "N 1808–1839 (41 snímků; rejstřík sn. 5–12, popis rodin 1811 sn. 16–21); OCR snímky 16–21, 24–29, 32–33, 35–38 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/n-2264"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "13b4c37a-a6dd-4ece-8f92-701a134d5e1d"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z9-2264-kurrent.pagexml.zip"
+  snimky: "16–21, 24–29, 32–33, 35–38"
   stranek: 18
   radku: 3839
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

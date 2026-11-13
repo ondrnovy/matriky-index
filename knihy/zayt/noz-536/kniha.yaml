@@ -7,11 +7,13 @@ roky: "1778–1864"
 obsah: "N 1778–1862, O 1839/1850, Z 1831–1864 (19 snímků); OCR snímky 4–17 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-536"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "d0273599-3711-4b2f-b6a7-86f3520258bc"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z9-536-kurrent.pagexml.zip"
+  snimky: "4–17"
   stranek: 14
   radku: 5991
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

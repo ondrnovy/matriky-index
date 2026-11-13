@@ -7,11 +7,13 @@ roky: "1722–1756"
 obsah: "NOZ 1722–1756; OCR jen N soubory 1580–2520 a 3670–3810 (asi 1743–1756) a O 3300–3620 (asi 1743–1/1756); snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/prestice-02"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "e0391f6c-46fc-4e7f-b7fa-7ca74f79baa5"
   model: "Czech Handwritten"
   datum: "2026-11-06"
   export: "prestice-02-P8.pagexml.zip"
+  snimky: "158–252, 330–362, 367–381"
   stranek: 143
   radku: 15779
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

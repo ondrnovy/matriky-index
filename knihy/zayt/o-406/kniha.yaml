@@ -6,11 +6,13 @@ roky: "1839–1850"
 obsah: "OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků oříznutých na knihu a otočených o 90° po směru hodinových ručiček (soubor -r)"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/o-406"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "59d2c47d-c079-4cbe-af77-4f405ae9982a"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-22"
   export: "hermanuv-mestec-o406-otocene.pagexml.zip"
+  snimky: "4–10, 12–34"
   stranek: 30
   radku: 4761
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

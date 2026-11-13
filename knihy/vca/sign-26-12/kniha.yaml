@@ -7,11 +7,13 @@ roky: "1806–1843"
 obsah: "po obcích; OCR snímky 74–87 (oddíl Pulice sn. 76–85, pag. 198–217); soubor = snímek; šedotónové JPEG 4078 px"
 url: "https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "6543ac92-3886-4503-b2f3-e973817b2f34"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-02"
   export: "dobruska-26-1-26-12.pagexml.zip"
+  snimky: "74–87"
   stranek: 14
   radku: 4004
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

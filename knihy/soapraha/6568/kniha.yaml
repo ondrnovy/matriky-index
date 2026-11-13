@@ -6,11 +6,13 @@ roky: "1735–1810"
 obsah: "OCR snímky 84–125 (O 1761–1810); soubor = číslo snímku v eBadatelně"
 url: "https://ebadatelna.soapraha.cz/d/6568/"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "fda952f8-d802-487f-b70a-c278de37df0a"
   model: "Czech Handwritten"
   datum: "2026-10-21"
   export: "knezeves-03.zip"
+  snimky: "84–125"
   stranek: 42
   radku: 9474
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

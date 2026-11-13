@@ -7,11 +7,13 @@ roky: "1874–1895"
 obsah: "OCR snímky 2–73; soubor = snímek; oříznuté, šedotónové, poloviční rozlišení"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/noz-530"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "e9d24973-74c9-4448-a926-a8bbf814d218"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-02"
   export: "zayt-o830-noz530.pagexml.zip"
+  snimky: "2–73"
   stranek: 72
   radku: 14382
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -1,13 +1,16 @@
-"""Converts a PERO OCR export into the index layout: knihy/<archiv>/<kniha>/ocr-pero.tsv, stranky.tsv and kniha.yaml.
+"""Converts machine-read text (PAGE XML) into the index layout: knihy/<archiv>/<kniha>/ocr-<cteni>.tsv,
+stranky-<cteni>.tsv and the `ocr` list in kniha.yaml.
 
     python tools/pero_import.py <export.zip> [<export.zip> ...]
 
-The export is either PERO's own ZIP (`/document/download_document_pages/<id>`: PAGE XML + TXT per page) or a
-`*.pagexml.zip` bundle assembled in the browser ("### PAGE <id>" followed by the page's PAGE XML). Only the text of
-each line, its bounding box and confidence are kept; polygons, baselines and PERO's internal ids are dropped.
-Book metadata comes from BOOKS below; a book is written only when its pages are found in the export.
-A book OCRed in parts (several PERO documents) is imported by passing all its exports in one call; each file is
-rewritten as a whole, so an export left out drops its pages.
+The export is PERO's own ZIP (`/document/download_document_pages/<id>`: PAGE XML + TXT per page), a `*.pagexml.zip`
+bundle assembled in the browser ("### PAGE <id>" followed by the page's PAGE XML) or any other ZIP of PAGE XML files
+(Transkribus, ScribbleSense). Only the text of each line, its bounding box and confidence are kept.
+Every reading (one tool and model) has its own pair of files, so several readings of a book stand side by side and
+none replaces another: PERO's reading is ocr-pero.tsv with stranky.tsv, any other one ocr-<cteni>.tsv with
+stranky-<cteni>.tsv. A reading made in parts (several documents) is imported by passing all its exports in one call;
+its files are rewritten as a whole, so an export left out drops its pages. A new book takes its kniha.yaml from BOOKS;
+an existing kniha.yaml keeps all its fields and only its `ocr` entries for the imported reading are replaced.
 """
 import argparse
 import csv
@@ -17,6 +20,8 @@ import sys
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree
+
+import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 PF = "https://www.portafontium.eu/register/soap-pn/"
@@ -383,7 +388,17 @@ BOOKS = {
                            url="https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea", prefix="kram1805",
                            delitel=1),
 }
-EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
+# export file stem -> (books it contains, PERO document, model, date), or a dict for other tools and settings:
+# knihy, cteni (file suffix, default "pero"), nastroj, nastaveni, dokument, model, datum, and for an export that
+# mixes models modely = {model id in the PAGE Creator: (cteni, model name)}.
+PERO = "PERO OCR (pero-ocr.fit.vutbr.cz)"
+PERO_NASTAVENI = "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
+TRANSKRIBUS = "Transkribus (app.transkribus.org), Quick Text Recognition"
+TK_MODELY = {"263129": ("transkribus-czech-m1", "Transkribus Czech Handwriting M1 (model 263129)"),
+             "341425": ("transkribus-old-czech", "Transkribus Old Czech Handwriting (with spaces) (model 341425)"),
+             "35909": ("transkribus-german-hw-m1", "Transkribus German Handwriting M1 (model 35909)"),
+             "50870": ("transkribus-german-giant", "The German Giant I (model 50870)")}
+EXPORTS = {
     "dnesice-01": (["dnesice-01"], "c1785e53-4a1c-40f7-a924-7d219217bf15", "Kurrent (German, Czech)", "2026-10-19"),
     "dnesice-02-test": (["dnesice-02"], "103bd7f2-529f-455d-b84e-285b8807397a", "Kurrent (German, Czech)", "2026-10-19"),
     "dolni-lukavice-01": (["dolni-lukavice-01"], "f576fcb5-bc48-406e-b75a-5a0a3b1e2d2c", "Kurrent (German, Czech)",
@@ -411,6 +426,9 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "kvasnovice-02": (["kvasnovice-02"], "039c275f-e042-487c-af86-180ece6ab7e1", "Czech Handwritten", "2026-10-21"),
     "portafontium-cernosin-03": (["cernosin-03"], "43460ced-f268-4f99-a402-52f59d4ecf15", "Kurrent (German, Czech)", "2026-11-12"),
     "portafontium-maly-bor-02-o": (["maly-bor-02"], "2c7d420e-1ffc-4d91-a2a7-5234dcdabe21", "Kurrent (German, Czech)", "2026-11-13"),
+    "export_job_31977240": dict(knihy=["horazdovice-05-zo", "1215ac03", "f7a85f10"], nastroj=TRANSKRIBUS,
+                                nastaveni="rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px (Opočno, Uhřínov) a 2600 px šedotónově (Horažďovice)",
+                                modely=TK_MODELY),
     "kvasnovice-01": (["kvasnovice-01"], "5c1a99a8-9ce5-4a29-b55e-e421741e0f61", "Kurrent (German, Czech)", "2026-10-21"),
     "kvasnovice-05": (["kvasnovice-05"], "eb1b5565-a613-4f43-9054-284e334056b0", "Kurrent (German, Czech)", "2026-10-22"),
     "maly-bor-06": (["maly-bor-06"], "c118aa96-dcf1-4ad3-97b9-21d1454f0e54", "Czech Handwritten", "2026-10-22"),
@@ -469,8 +487,9 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "vs-horazdovice-k1563": (["vs-horazdovice-k1563"], "d93b37ec-4ffb-4ad6-a2a6-e3d4846c54da", "Czech Handwritten",
                              "2026-10-22"),
     "horazdovice-05-zo": (["horazdovice-05-zo"], "61f588be-d923-4111-85d4-63af9d9c9101", "Czech Handwritten", "2026-10-22"),
-    "horazdovice-05-kurrent": (["horazdovice-05-kurrent"], "8862a4c4-aeee-4093-9fc2-cf199db556de", "Kurrent (German, Czech)",
-                               "2026-10-22"),
+    "horazdovice-05-kurrent": dict(knihy=["horazdovice-05"], cteni="pero-kurrent",
+                                   dokument="8862a4c4-aeee-4093-9fc2-cf199db556de",
+                                   model="Kurrent (German, Czech)", datum="2026-10-22"),
 }
 
 
@@ -497,7 +516,17 @@ def parse_page(xml):
         text = (unicode.text or "") if unicode is not None else ""
         conf = equiv.get("conf", "") if equiv is not None else ""
         lines.append((min(xs), min(ys), max(xs) - min(xs), max(ys) - min(ys), conf, " ".join(text.split())))
-    return page.get("imageFilename").rsplit(".", 1)[0], width, height, lines
+    info = {}
+    for e in root.iter():
+        name = local(e)
+        if name == "Creator" and e.text and (m := re.search(r"model_id=(\d+)", e.text)):
+            info["model_id"] = m[1]
+        elif name == "Created" and e.text:
+            info["datum"] = e.text[:10]
+        elif name == "TranskribusMetadata":
+            info["dokument"] = e.get("docId")
+    image = page.get("imageFilename").rsplit(".", 1)[0]
+    return image, width, height, lines, info
 
 
 def pages(path):
@@ -519,6 +548,13 @@ def book_of(image, books):
     return None
 
 
+def page_image(image, books):
+    """Transkribus names a page '<page no>_<file>'; the book is found by the file name."""
+    if book_of(image, books) is None and (m := re.match(r"\d{4}_(.+)$", image)):
+        return m[1]
+    return image
+
+
 def file_number(image):
     m = re.search(r"(\d{4})(?:-[a-z]+)?$", image)
     return int(m.group(1)) if m else None
@@ -531,12 +567,45 @@ def snimek(key, image):
     return str(n // BOOKS[key].get("delitel", 10))
 
 
-def write_book(key, rows, page_rows, ocr):
+def compact(numbers):
+    """1, 2, 3, 7 -> '1–3, 7'"""
+    nums = sorted(set(numbers))
+    out, start = [], None
+    for k, n in enumerate(nums):
+        if start is None:
+            start = n
+        if k + 1 == len(nums) or nums[k + 1] != n + 1:
+            out.append(f"{start}–{n}" if n != start else f"{n}")
+            start = None
+    return ", ".join(out)
+
+
+def files_of(cteni):
+    return ("ocr-pero.tsv", "stranky.tsv") if cteni == "pero" else (f"ocr-{cteni}.tsv", f"stranky-{cteni}.tsv")
+
+
+def dump_yaml(data):
+    def q(value):  # a JSON string is a valid YAML scalar, colons included
+        return str(value) if isinstance(value, int) else json.dumps(str(value), ensure_ascii=False)
+    out = []
+    for k, v in data.items():
+        if isinstance(v, list):
+            out.append(f"{k}:")
+            for item in v:
+                for n, (kk, vv) in enumerate(item.items()):
+                    out.append(f"{'- ' if n == 0 else '  '}{kk}: {q(vv)}")
+        elif v is not None:
+            out.append(f"{k}: {q(v)}")
+    return "\n".join(out) + "\n"
+
+
+def write_book(key, cteni, rows, page_rows, entries):
     meta = BOOKS[key]
     out = REPO / "knihy" / meta["archiv"] / key
     out.mkdir(parents=True, exist_ok=True)
+    ocr_file, pages_file = files_of(cteni)
     rows.sort(key=lambda r: (file_number(r[1]) or 0, r[1], r[2], r[4]))
-    with open(out / "ocr-pero.tsv", "w", encoding="utf-8", newline="") as f:
+    with open(out / ocr_file, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["snimek", "soubor", "strana", "radek", "x", "y", "sirka", "vyska", "jistota", "text"])
         line_no = {}
@@ -544,25 +613,22 @@ def write_book(key, rows, page_rows, ocr):
             line_no[(image, side)] = line_no.get((image, side), 0) + 1
             w.writerow([snim, image, side, line_no[(image, side)], x, y, wd, ht, conf, text])
     page_rows.sort(key=lambda r: (file_number(r[1]) or 0, r[1]))
-    with open(out / "stranky.tsv", "w", encoding="utf-8", newline="") as f:
+    with open(out / pages_file, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["snimek", "soubor", "sirka_obrazku", "vyska_obrazku", "radku"])
         w.writerows(page_rows)
-    q = lambda value: json.dumps(value, ensure_ascii=False)  # a JSON string is a valid YAML scalar, colons included
-    yaml = [f"archiv: {q(meta['archiv'])}", f"kniha: {q(key)}", f"nazev: {q(meta['nazev'])}",
-            f"druh: {q(meta.get('druh', 'matrika'))}", f"farnost: {q(meta['farnost'])}",
-            f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}"]
-    if meta.get("poznamka"):
-        yaml.append(f"poznamka: {q(meta['poznamka'])}")
-    yaml.append("ocr:")
-    for export_name, pero_doc, model, date, pages_n, rows_n in ocr:
-        yaml += [f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
-                 f"  datum: {q(date)}",
-                 f"  export: {q(export_name)}",
-                 f"  stranek: {pages_n}", f"  radku: {rows_n}",
-                 f"  poznamka: {q('souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný')}"]
-    (out / "kniha.yaml").write_text("\n".join(yaml) + "\n", encoding="utf-8")
-    print(f"{meta['archiv']}/{key}: {len(page_rows)} stran, {len(rows)} řádků")
+    path = out / "kniha.yaml"
+    if path.exists():
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    else:
+        data = {"archiv": meta["archiv"], "kniha": key, "nazev": meta["nazev"], "druh": meta.get("druh", "matrika"),
+                "farnost": meta["farnost"], "roky": meta["roky"], "obsah": meta["obsah"], "url": meta["url"],
+                "poznamka": meta.get("poznamka")}
+    old = data.get("ocr") or []
+    keep = [e for e in old if isinstance(e, dict) and e.get("soubor", "ocr-pero.tsv") != ocr_file]
+    data["ocr"] = keep + entries
+    path.write_text(dump_yaml(data), encoding="utf-8", newline="\n")
+    print(f"{meta['archiv']}/{key} {ocr_file}: {len(page_rows)} stran, {len(rows)} řádků")
 
 
 def main():
@@ -570,32 +636,60 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("export", type=Path, nargs="+")
     args = parser.parse_args()
-    rows, page_rows, ocr = {}, {}, {}
+    rows, page_rows, entries = {}, {}, {}
     for export in args.export:
         stem = export.name.removesuffix(".zip").removesuffix(".pagexml")
         if stem not in EXPORTS:
             sys.exit(f"unknown export {stem}; add it to EXPORTS")
-        keys, pero_doc, model, date = EXPORTS[stem]
-        counts = {k: [0, 0] for k in keys}
+        spec = EXPORTS[stem]
+        if not isinstance(spec, dict):
+            spec = dict(knihy=spec[0], dokument=spec[1], model=spec[2], datum=spec[3])
+        keys = spec["knihy"]
+        seen = {}
         for xml in pages(export):
             parsed = parse_page(xml)
             if parsed is None:
                 continue
-            image, width, height, lines = parsed
+            image, width, height, lines, info = parsed
+            image = page_image(image, keys)
             key = book_of(image, keys)
             if key is None:
                 print(f"skipping page {image}", file=sys.stderr)
                 continue
+            if "modely" in spec:
+                if info.get("model_id") not in spec["modely"]:
+                    sys.exit(f"{image}: model {info.get('model_id')} is not in modely")
+                cteni, model = spec["modely"][info["model_id"]]
+            else:
+                cteni, model = spec.get("cteni", "pero"), spec["model"]
             snim = snimek(key, image)
-            page_rows.setdefault(key, []).append([snim, image, width, height, len(lines)])
-            counts[key][0] += 1
-            counts[key][1] += len(lines)
+            page_rows.setdefault((key, cteni), []).append([snim, image, width, height, len(lines)])
             for x, y, wd, ht, conf, text in lines:
-                rows.setdefault(key, []).append((snim, image, "L" if x < width / 2 else "R", x, y, wd, ht, conf, text))
-        for key in keys:
-            ocr.setdefault(key, []).append((export.name, pero_doc, model, date, *counts[key]))
-    for key in ocr:
-        write_book(key, rows.get(key, []), page_rows.get(key, []), ocr[key])
+                rows.setdefault((key, cteni), []).append(
+                    (snim, image, "L" if x < width / 2 else "R", x, y, wd, ht, conf, text))
+            s = seen.setdefault((key, cteni), {"stranek": 0, "radku": 0, "snimky": [], "dokumenty": [], "data": [],
+                                               "model": model})
+            s["stranek"] += 1
+            s["radku"] += len(lines)
+            if snim.isdigit():
+                s["snimky"].append(int(snim))
+            for k, lst in (("dokument", "dokumenty"), ("datum", "data")):
+                if info.get(k) and info[k] not in s[lst]:
+                    s[lst].append(info[k])
+        for (key, cteni), s in seen.items():
+            data = sorted(s["data"])
+            entry = {"soubor": files_of(cteni)[0], "nastroj": spec.get("nastroj", PERO),
+                     "dokument": spec.get("dokument") or ", ".join(s["dokumenty"]), "model": s["model"]}
+            if spec.get("nastaveni") or entry["nastroj"] == PERO:
+                entry["nastaveni"] = spec.get("nastaveni", PERO_NASTAVENI)
+            entry.update({"datum": spec.get("datum") or (data[0] if len(data) < 2 else f"{data[0]}–{data[-1]}"),
+                          "export": export.name, "snimky": compact(s["snimky"]), "stranek": s["stranek"],
+                          "radku": s["radku"],
+                          "poznamka": f"souřadnice v pixelech nahraného obrázku (viz {files_of(cteni)[1]}); text je "
+                                      f"strojový, nekontrolovaný"})
+            entries.setdefault((key, cteni), []).append(entry)
+    for key, cteni in entries:
+        write_book(key, cteni, rows.get((key, cteni), []), page_rows.get((key, cteni), []), entries[(key, cteni)])
 
 
 if __name__ == "__main__":

@@ -6,11 +6,13 @@ roky: "1735–1770"
 obsah: "OCR jen snímky 55–75 (N 1746–1752) a 162–173 (O 1735–1744) – test přesnosti"
 url: "https://www.portafontium.eu/register/soap-pn/dnesice-02"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "103bd7f2-529f-455d-b84e-285b8807397a"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
   export: "dnesice-02-test.zip"
+  snimky: "55–75, 162–173"
   stranek: 33
   radku: 4242
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

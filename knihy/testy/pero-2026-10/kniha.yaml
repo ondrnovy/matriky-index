@@ -1,6 +1,7 @@
 nazev: "První test PERO – 8 výřezů zápisů z Malého Boru a Kvasnovic (Porta fontium)"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "613d532f-8deb-4caa-81f9-5ad1e9bd17ea"
   model: "Czech Handwritten"
   datum: "2026-10"

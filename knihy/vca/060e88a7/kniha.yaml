@@ -7,11 +7,13 @@ roky: "1642–1905"
 obsah: "rejstřík oddaných celé farnosti po písmenech, v písmeni chronologicky (rok, ženich, obec, nevěsta, folio); OCR jen písmeno S (snímky 86–104: S 1700–1842 = sn. 89–93, 1842–1899 = 94–96; Š/Sch dál); soubor = snímek; šedotónové JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/060e88a7-18e2-419a-8e49-b958f7b76396"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "22584668-c138-4a53-a0e9-b6d76bc57563"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-smola-o-destne-rokytnice-uhrinov-nmnm.pagexml.zip"
+  snimky: "86–104"
   stranek: 19
   radku: 10891
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -6,11 +6,13 @@ roky: "1764–1784"
 obsah: "N (snímky 5–95), O od 1764 (96–129), Z (130–187); latinsky"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-06"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "c118aa96-dcf1-4ad3-97b9-21d1454f0e54"
   model: "Czech Handwritten"
   datum: "2026-10-22"
   export: "maly-bor-06.pagexml.zip"
+  snimky: "5–187"
   stranek: 183
   radku: 34691
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

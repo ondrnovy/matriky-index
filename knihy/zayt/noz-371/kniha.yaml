@@ -7,11 +7,13 @@ roky: "1822–1839"
 obsah: "O 1822–1839, N 1833–1839, Z 1827–1839 (11 snímků); OCR snímky 3–9 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-371"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "cbd6c056-ef2e-4854-98b0-ef8e0b266409"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z9-371-kurrent.pagexml.zip"
+  snimky: "3–9"
   stranek: 7
   radku: 1584
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

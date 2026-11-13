@@ -1,6 +1,7 @@
 """Searches all indexed books for a word, tolerating OCR errors: entries read by eye (precteno.tsv), the scribe's errors
 corrected in vyklad.tsv (a hit on the corrected value shows the entry as written) and the machine OCR text
-(ocr-pero.tsv) with corrections from opravy.tsv applied (the original OCR text is searched too).
+(ocr-pero.tsv and the other readings ocr-<cteni>.tsv) with corrections from opravy.tsv applied (the original OCR text
+is searched too).
 
     python tools/hledej.py <slovo> [--maxd 2] [--kniha KNIHA] [--kontext 1] [--skip REGEX]
 
@@ -15,7 +16,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from opravy import apply, read_tsv
+from opravy import apply, ocr_files, read_tsv
 
 REPO = Path(__file__).resolve().parent.parent
 csv.field_size_limit(10_000_000)
@@ -78,23 +79,25 @@ def main():
                     hits += 1
                     print(f"{where} snímek {snimek} [výklad] [{match}] {v['udaj']}: napsáno „{v['napsano']}“, správně "
                           f"„{v['spravne']}“ (doklady: {v['doklady']}) | {entries.get((snimek, datum), datum)}")
-        rows = read_tsv(folder / "ocr-pero.tsv")
-        for row in rows:  # the test crops (knihy/testy) have "vyrez" instead of "soubor" and no "strana"
-            row.setdefault("soubor", row.get("vyrez", ""))
-            row.setdefault("strana", "")
-        rows = apply(rows, read_tsv(folder / "opravy.tsv"))
-        pages = {}
-        for row in rows:
-            pages.setdefault((row["soubor"], row["strana"]), []).append(row)
-        for (image, side), lines in pages.items():
-            for i, row in enumerate(lines):
-                match = found(row["text"]) or (found(row["text_ocr"]) if "text_ocr" in row else None)
-                if not match:
-                    continue
-                hits += 1
-                around = " / ".join(r["text"] for r in lines[max(0, i - args.kontext): i + args.kontext + 1])
-                fixed = " [opraveno]" if "text_ocr" in row else ""
-                print(f"{where} snímek {row['snimek']}{side} ř.{row['radek']}{fixed} [{match}] {around}")
+        for ocr in ocr_files(folder):
+            label = "" if ocr.name == "ocr-pero.tsv" else f" [{ocr.stem.removeprefix('ocr-')}]"
+            rows = read_tsv(ocr)
+            for row in rows:  # the test crops (knihy/testy) have "vyrez" instead of "soubor" and no "strana"
+                row.setdefault("soubor", row.get("vyrez", ""))
+                row.setdefault("strana", "")
+            rows = apply(rows, read_tsv(folder / "opravy.tsv"))
+            pages = {}
+            for row in rows:
+                pages.setdefault((row["soubor"], row["strana"]), []).append(row)
+            for (image, side), lines in pages.items():
+                for i, row in enumerate(lines):
+                    match = found(row["text"]) or (found(row["text_ocr"]) if "text_ocr" in row else None)
+                    if not match:
+                        continue
+                    hits += 1
+                    around = " / ".join(r["text"] for r in lines[max(0, i - args.kontext): i + args.kontext + 1])
+                    fixed = " [opraveno]" if "text_ocr" in row else ""
+                    print(f"{where}{label} snímek {row['snimek']}{side} ř.{row['radek']}{fixed} [{match}] {around}")
     print(f"{hits} zásahů", file=sys.stderr)
 
 

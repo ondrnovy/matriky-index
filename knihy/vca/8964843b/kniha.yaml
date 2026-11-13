@@ -8,11 +8,13 @@ obsah: "latinsky; N 1771–1783 asi sn. 5–95 (1778 ≈ sn. 47–52, 1780 ≈ 6
 url: "https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49"
 poznamka: "OCR celé knihy ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; zápisy přečtené očima v precteno.tsv"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "8a8b2b23-2fa8-4dab-91d8-53d33ff2378d"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-10"
   export: "vca-novy-hradek-117-2.pagexml.zip"
+  snimky: "1–276"
   stranek: 276
   radku: 99396
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

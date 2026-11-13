@@ -7,11 +7,13 @@ roky: "1799–1806"
 obsah: "fol. = snímek + 2 (sn. 45 = fol. 47, XI–XII 1799); OCR snímky 115–189 (úmrtní oddíl, bez rejstříku); soubor = snímek; šedotónové JPEG 4078 px"
 url: "https://storage.vychodoceskearchivy.cz/matriky/R/CZ_215000010_00190_RRGJJKAQ_sign-26-1.zip"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "6543ac92-3886-4503-b2f3-e973817b2f34"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-02"
   export: "dobruska-26-1-26-12.pagexml.zip"
+  snimky: "115–189"
   stranek: 75
   radku: 16718
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

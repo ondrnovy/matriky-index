@@ -8,11 +8,13 @@ obsah: "N farnosti Choceň a filiálek chronologicky (sloupce Locus, Dies, Nomen
 url: "https://aron.vychodoceskearchivy.cz/apu/1a6d0b5c-5f05-41fe-8bc6-27540ddbae5c"
 poznamka: "OCR jen snímky 270–390 (asi 1752–1766) ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; jinak jen jednotlivé stránky očima"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "2db0d5e1-2ee0-4150-98e4-83f9b1fd1dba"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-chocen-2095-sn270-390.pagexml.zip"
+  snimky: "270–390"
   stranek: 121
   radku: 31359
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

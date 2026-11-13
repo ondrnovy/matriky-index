@@ -54,10 +54,13 @@ nikdo další. Stačí pull request s novými řádky v `knihy/<archiv>/<kniha>/
 knihy/<archiv>/<kniha>/
   kniha.yaml      popis knihy: archiv, název, farnost, roky, obsah (které snímky jsou N/O/Z), odkaz na portál,
                   volitelně mapa (odkaz na mapu knihy v Mapě matrik, github.com/ondrnovy/mapa-matrik), jak se
-                  z čísla souboru dostat na snímek, a pro každé OCR: nástroj, dokument v PERO, model, datum
-  stranky.tsv     zpracované stránky: snímek, soubor, rozměry obrázku, počet řádků
-  ocr-pero.tsv    strojový text: snímek, soubor, strana (L/R), řádek, obdélník x/y/šířka/výška v pixelech obrázku,
-                  jistota (0–1), text – nekontrolovaný, s chybami
+                  z čísla souboru dostat na snímek, a seznam ocr – u každého strojového čtení soubor, nástroj,
+                  dokument, model, nastavení (rozbor rozložení, jazykový model, rozlišení), datum, snímky
+  ocr-pero.tsv    strojový text z PERO: snímek, soubor, strana (L/R), řádek, obdélník x/y/šířka/výška v pixelech
+                  obrázku, jistota (0–1), text – nekontrolovaný, s chybami
+  stranky.tsv     stránky čtení ocr-pero.tsv: snímek, soubor, rozměry nahraného obrázku, počet řádků
+  ocr-<cteni>.tsv,  další strojová čtení téže knihy (jiný nástroj nebo model, např. ocr-transkribus-czech-m1.tsv,
+  stranky-<cteni>.tsv   ocr-scribblesense.tsv) ve stejném formátu; každé čtení má vlastní dvojici souborů
   precteno.tsv    zápisy přečtené očima (formát níže)
   opravy.tsv      opravy strojového čtení (viz Vrstvy a opravy)
   vyklad.tsv      chyby písaře doložené jinými zápisy (formát níže)
@@ -116,11 +119,19 @@ Celý postup (skeny podle archivu, nahrání do PERO, rozbor rozložení, volba 
 „Handwritten layout“, OCR „Kurrent (German, Czech)“ pro kurent, „Czech Handwritten“ pro latinku, export, doplnit
 `BOOKS` a `EXPORTS` v `tools/pero_import.py` a spustit `python tools/pero_import.py <export.zip>`.
 
+Strojový text z jiného nástroje (Transkribus, ScribbleSense) se importuje stejně, z exportu PAGE XML: v `EXPORTS` se
+u něj uvede `cteni` (přípona souborů), `nastroj`, `model` a `nastaveni`, případně `modely`, když export míchá víc
+modelů. Vznikne `ocr-<cteni>.tsv` a `stranky-<cteni>.tsv` vedle stávajících čtení a položka v `ocr` v `kniha.yaml`.
+Česká kurzíva 17.–18. století: Transkribus „Czech Handwriting M1“ čte jména zhruba dvakrát lépe než PERO; latinu a
+kurent PERO stejně dobře nebo lépe.
+
 ## Vrstvy a opravy
 
 Původní data se nepřepisují, opravy a výklady se přidávají zvlášť:
 
-1. `ocr-pero.tsv` – strojový text, nemění se (při lepším OCR se vymění celý).
+1. `ocr-pero.tsv` a `ocr-<cteni>.tsv` – strojový text, nemění se. Každé čtení (nástroj a model) má vlastní soubor;
+   lepší čtení se přidá vedle, starší se nemaže – každý nástroj je silný na jiné písmo. Soubor se přepíše jen celý
+   novým exportem téhož čtení.
 2. `opravy.tsv` – opravy strojového čtení: co je na skenu opravdu napsáno (PERO „Plohar“, napsáno „Ploczar“). Oprava je
    ukotvená obdélníkem řádku na skenu, ne jeho číslem, takže přežije nové OCR. Přidává se nástrojem:
 

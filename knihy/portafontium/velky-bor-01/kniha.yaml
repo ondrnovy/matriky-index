@@ -6,11 +6,13 @@ roky: "1707–1754"
 obsah: "N 1707–1753 (snímky 2–180), O 1708–1754 (181–228); snímek 135 na serveru prázdný"
 url: "https://www.portafontium.eu/register/soap-pn/velky-bor-01"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "658b2c64-93b8-43a8-a478-3cfd30f232fa"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
   export: "velky-bor-01.zip"
+  snimky: "2–134, 136–228"
   stranek: 226
   radku: 32078
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

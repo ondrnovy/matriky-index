@@ -7,11 +7,13 @@ roky: "1788–1863"
 obsah: "N 1788–1860, O 1824–1857, Z 1829–1863 (31 snímků); OCR snímky 4–12, 14–15, 17–29 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-535"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "1568011a-e994-44d4-9444-ed481590ced4"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z9-535-kurrent.pagexml.zip"
+  snimky: "4–12, 14–15, 17–29"
   stranek: 24
   radku: 4058
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

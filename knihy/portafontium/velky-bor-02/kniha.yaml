@@ -6,11 +6,13 @@ roky: "1746–1771"
 obsah: "N 1746–1771 (snímky 4–163); snímek 134 na serveru prázdný"
 url: "https://www.portafontium.eu/register/soap-pn/velky-bor-02"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "ea0f5d04-f694-4607-a7b3-030028813dbf"
   model: "Czech Handwritten"
   datum: "2026-10-21"
   export: "velky-bor-02.zip"
+  snimky: "4–133, 135–163"
   stranek: 159
   radku: 25028
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

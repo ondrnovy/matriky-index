@@ -7,11 +7,13 @@ roky: "1784–1849"
 obsah: "O 6/1784–1849, německy; snímky 1–71; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/c3113199-3a1e-42e1-9ea0-742a7f22d89e"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "22584668-c138-4a53-a0e9-b6d76bc57563"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-smola-o-destne-rokytnice-uhrinov-nmnm.pagexml.zip"
+  snimky: "1–71"
   stranek: 71
   radku: 18497
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

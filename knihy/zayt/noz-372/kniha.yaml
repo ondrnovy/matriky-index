@@ -6,11 +6,13 @@ roky: "1840–1862"
 obsah: "N 1840–1862 fol. 1–10 (fol. 9 = sn. 11, fol. 10 = sn. 12), O 1840–1862 fol. 17–19 = sn. 13–15 (posty 1–19), Z 1840–1862 fol. 24–30 = sn. 16–22, společný rejstřík N+O+Z (folio/post) pag. 40–46 = sn. 23–29, sn. 30 závěrečná doložka; OCR snímky 15–31; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "17f0a0e2-56cb-476e-beb1-667191362e2a"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
   export: "zidovske-o235-o2434-noz372.zip"
+  snimky: "15–31"
   stranek: 17
   radku: 2842
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

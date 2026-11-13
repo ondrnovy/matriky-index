@@ -6,11 +6,24 @@ roky: "1699–1747"
 obsah: "Z (snímky 185–252) a O (269–322); oddíl N je v horazdovice-05"
 url: "https://www.portafontium.eu/register/soap-pn/horazdovice-05"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "61f588be-d923-4111-85d4-63af9d9c9101"
   model: "Czech Handwritten"
   datum: "2026-10-22"
   export: "horazdovice-05-zo.pagexml.zip"
+  snimky: "185–200, 202–252, 269–322"
   stranek: 121
   radku: 13989
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-transkribus-czech-m1.tsv"
+  nastroj: "Transkribus (app.transkribus.org), Quick Text Recognition"
+  dokument: "20239240"
+  model: "Transkribus Czech Handwriting M1 (model 263129)"
+  nastaveni: "rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px (Opočno, Uhřínov) a 2600 px šedotónově (Horažďovice)"
+  datum: "2026-11-13"
+  export: "export_job_31977240.zip"
+  snimky: "277–282"
+  stranek: 6
+  radku: 421
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-czech-m1.tsv); text je strojový, nekontrolovaný"

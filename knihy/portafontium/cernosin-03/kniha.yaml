@@ -7,11 +7,14 @@ roky: "1731–1758"
 obsah: "německy a latinsky; podle nadpisů ve strojovém textu: N 1731–1758 (asi snímky 3–78, 1756 ≈ 69, 1758 ≈ 74), O (asi 78–108, 1751 ≈ 101), abecední rejstřík (109–125), Z 1731–1758 (126–165), biřmovaní 1751 (166); snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/cernosin-03"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "43460ced-f268-4f99-a402-52f59d4ecf15"
   model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
   datum: "2026-11-12"
   export: "portafontium-cernosin-03.pagexml.zip"
+  snimky: "1–171"
   stranek: 171
   radku: 26521
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

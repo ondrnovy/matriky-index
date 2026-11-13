@@ -316,7 +316,9 @@ async function book(id, tab, param) {
   }
   if (!k.ocr_stran) { box.innerHTML = `<p class="muted">Tato kniha strojový text (OCR) nemá.</p>`; return; }
   const base = `knihy/${k.id}/`;
-  const [stranky, ocr, opravy] = await Promise.all([tsv(base + "stranky.tsv"), tsv(base + "ocr-pero.tsv"), tsv(base + "opravy.tsv")]);
+  const cteni = k.ocr_cteni && k.ocr_cteni.length ? k.ocr_cteni : [{soubor: "ocr-pero.tsv", stranky: "stranky.tsv", popis: "PERO OCR"}];
+  const vybrane = cteni.find(c => c.soubor === window.ocrCteni) || cteni[0];
+  const [stranky, ocr, opravy] = await Promise.all([tsv(base + vybrane.stranky), tsv(base + vybrane.soubor), tsv(base + "opravy.tsv")]);
   const byPage = new Map();
   for (const r of ocr) {
     for (const c of opravy) {
@@ -348,6 +350,7 @@ async function book(id, tab, param) {
   };
   let current = pages.includes(param) ? param : pages[0];
   box.innerHTML = `
+    ${cteni.length > 1 ? `<div class="row small">Čtení: <select id="cteni">${cteni.map(c => `<option value="${esc(c.soubor)}" ${c === vybrane ? "selected" : ""}>${esc(c.popis)}</option>`).join("")}</select></div>` : ""}
     <div class="pager">
       <button class="ghost" id="prev">←</button>
       <select id="page">${stranky.map(s => `<option value="${esc(s.soubor)}" ${s.soubor === current ? "selected" : ""}>snímek ${esc(s.snimek)} (${esc(s.soubor)})</option>`).join("")}</select>
@@ -357,6 +360,8 @@ async function book(id, tab, param) {
     </div><div id="ocrview"></div>`;
   const go = s => { current = s; document.getElementById("page").value = s; history.replaceState(null, "", `#kniha/${k.id}/ocr/${encodeURIComponent(s)}`); render(s); };
   document.getElementById("page").onchange = e => go(e.target.value);
+  const sc = document.getElementById("cteni");
+  if (sc) sc.onchange = e => { window.ocrCteni = e.target.value; book(id, "ocr", current); };
   document.getElementById("prev").onclick = () => { const p = pages.indexOf(current); if (p > 0) go(pages[p - 1]); };
   document.getElementById("next").onclick = () => { const p = pages.indexOf(current); if (p < pages.length - 1) go(pages[p + 1]); };
   let t;

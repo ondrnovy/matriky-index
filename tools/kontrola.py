@@ -42,7 +42,8 @@ PRODUKT = re.compile(r"\b(chatgpt|copilot|perplexity)\b", re.I)
 # Matriky narozených jsou veřejně přístupné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
 # 301/2000 Sb., § 5a); soupisy obyvatel držíme stejně jako narozené. Mladší zápisy mohou týkat žijících lidí.
 LHUTA = {"N": 100, "S": 100, "O": 75, "Z": 75}
-# Soubory, ve kterých se cizí řádky nesmí mazat ani měnit (ocr-pero.tsv se při lepším OCR vyměňuje celý).
+# Soubory, ve kterých se cizí řádky nesmí mazat ani měnit. Strojová čtení (ocr-*.tsv) se nepřepisují jinými nástroji:
+# každé čtení má vlastní soubor a import ho přepíše jen celé, novým exportem téhož čtení.
 NEPREPISOVAT = ("precteno.tsv", "opravy.tsv", "vyklad.tsv")
 # Doklad výkladu: zápis v precteno.tsv, „<archiv>/<kniha>/<snimek> <datum> (popis)“; víc dokladů oddělených „; “.
 DOKLAD = re.compile(r"^([^/\s]+)/([^/\s]+)/([^/\s]+) (\S+)(?: \((.+)\))?$")
@@ -104,10 +105,16 @@ def kontrola_knihy(d, h, prisne, pridane=None):
             hodnota = meta.get(pole)
             if hodnota and not str(hodnota).startswith(("https://", "http://")):
                 h.chyba(rel(ky), f"{pole} „{str(hodnota)[:60]}“ musí začínat https:// nebo http://")
-    for jmeno, hlavicka in HLAVICKY.items():
-        p = d / jmeno
-        if p.exists():
-            kontrola_tsv(p, hlavicka, h, (pridane or {}).get(rel(p), set()))
+    for p in sorted(d.glob("*.tsv")):
+        jmeno = ("ocr-pero.tsv" if p.name.startswith("ocr-") else "stranky.tsv" if p.name.startswith("stranky-")
+                 else p.name)
+        if jmeno in HLAVICKY:
+            kontrola_tsv(p, HLAVICKY[jmeno], h, (pridane or {}).get(rel(p), set()))
+    if ky.exists():
+        ocr = (yaml.safe_load(ky.read_text(encoding="utf-8")) or {}).get("ocr") or []
+        for e in ocr if isinstance(ocr, list) else [ocr]:
+            if isinstance(e, dict) and e.get("soubor") and not (d / str(e["soubor"])).exists():
+                h.chyba(rel(ky), f"ocr: soubor {e['soubor']} v knize není")
 
 
 def rok_udalosti(datum):

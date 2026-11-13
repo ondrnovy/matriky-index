@@ -6,11 +6,13 @@ roky: "1727–1744"
 obsah: "N 1727–1744 (snímky 3–78, mezi nimi listy x; na snímku 72 i oddaní 1728), O (79–93, od 9/1735), Z (94–118)"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-04"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "949bb837-fa4e-4144-a503-65ae049bcf1f"
   model: "Czech Handwritten"
   datum: "2026-10-21"
   export: "maly-bor-04.zip"
+  snimky: "3–118"
   stranek: 116
   radku: 12230
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

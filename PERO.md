@@ -51,6 +51,9 @@ nejdřív zkontroluj náhled jednoho souboru. Číslo v názvu souboru je čísl
 2. Knihu doplnit do `BOOKS` a export do `EXPORTS` v `tools/pero_import.py` (archiv, název, roky, obsah, url,
    prefix souborů, `delitel` = jak z čísla souboru dostat snímek; PERO dokument, model, datum).
 3. `python tools/pero_import.py <název>.pagexml.zip` → `knihy/<archiv>/<kniha>/ocr-pero.tsv` a `stranky.tsv`.
+   Jiný model nebo nástroj (druhé čtení téže knihy) dostane v `EXPORTS` vlastní `cteni` a soubory
+   `ocr-<cteni>.tsv`, `stranky-<cteni>.tsv`; stávající čtení zůstane. Export PAGE XML z Transkribusu nebo
+   ScribbleSense se importuje stejně.
 
 ## 5. Hledání a čtení
 

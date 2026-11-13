@@ -7,11 +7,13 @@ roky: "10/1850–1857"
 obsah: "N Litomyšl město a předměstí (Dolní a Horní předměstí, Lány, Zahájí, Záhradí); snímky 1–395; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "9cf4c19e-3582-41cf-82c8-c4cb45510542"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-02"
   export: "litomysl-n-1309.pagexml.zip"
+  snimky: "1–395"
   stranek: 395
   radku: 56501
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

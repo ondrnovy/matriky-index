@@ -6,11 +6,13 @@ roky: "1839–1882"
 obsah: "OCR snímky 41–46 a 51–58 (asi 1855–1857 a 1861–1866); soubor = snímek; zápisy svisle, OCR z oříznutých a otočených obrázků (soubor -r)"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/z-236"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "ac372e5b-9763-46d4-9c58-9d48def1d0cf"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-22"
   export: "hrochuv-tynec-z236-otocene.pagexml.zip"
+  snimky: "41–46, 51–58"
   stranek: 14
   radku: 2011
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

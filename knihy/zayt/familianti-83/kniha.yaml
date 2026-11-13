@@ -6,11 +6,13 @@ roky: "1811–1848"
 obsah: "OCR snímky 21–70 = panství Kostelec nad Černými lesy od fol. 43 (snímek 30 = fol. 60); soubor = snímek"
 url: "https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/83"
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "8c28db92-6852-49c1-8a02-d9dcb650a12b"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
   export: "familianti-83-kostelec.zip"
+  snimky: "21–70"
   stranek: 50
   radku: 5002
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
