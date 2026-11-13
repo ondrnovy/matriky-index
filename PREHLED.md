@@ -369,16 +369,16 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 165-3962 (poř.č. 11636), 1829-1876 – římskokatolická matrika NAROZENÝCH, Albrechtice nad Orlicí (1829-4.1876), Štěpánovsko (1829-1875), Nová Ves (1829-4.1876)](https://aron.vychodoceskearchivy.cz/apu/fe8f9155-104c-4fc2-9122-841895dd5113) | matrika | 1829–1876 |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 14-1 (poř.č. 708), 1784-1799](https://aron.vychodoceskearchivy.cz/apu/ff03e2c0-8943-480b-af44-4661b9256755) | matrika |  |  |  | 27 (J 2 N 25) |
 | [Sbírka matrik Východočeského kraje, sign.: 14-2765 (poř.č. 724), 1785-1812 – římskokatolický index ZEMŘELÝCH, farnost (Bačetín, Bystré, Janov, Kounov, Ohnišov, Sudín)](https://aron.vychodoceskearchivy.cz/apu/ffcc1f51-2ef4-46e6-a08e-ed8f523c237e) | matrika |  |  |  | 15 (J 4 Z 11) |
-| [Opočno N, Z, O 1723–1797, sign. 120-1 (kód VCACWBOV)](https://storage.vychodoceskearchivy.cz/matriky/V/CZ_215000010_00190_VCACWBOV_sign-120-1.zip) | matrika |  |  |  | 4 (O 4) |
-| [Opočno O 1784–1834 (Pohoří, Puličky, Semechnice, Trnov), sign. 120-11 (kód 5JZN4DBO)](https://storage.vychodoceskearchivy.cz/matriky/5/CZ_215000010_00190_5JZN4DBO_sign-120-11.zip) | matrika |  |  |  | 6 (O 6) |
+| [Opočno N, Z, O 1723–1797, sign. 120-1 (kód VCACWBOV)](https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45) | matrika |  |  |  | 4 (O 4) |
+| [Opočno O 1784–1834 (Pohoří, Puličky, Semechnice, Trnov), sign. 120-11 (kód 5JZN4DBO)](https://aron.vychodoceskearchivy.cz/apu/ab67b4df-8c81-4421-97bc-508551f5366d) | matrika |  |  |  | 6 (O 6) |
 | [Opočno, rejstřík oddaných 1723–1797, sign. 120-15 (kód L2A5OAAQ)](https://storage.vychodoceskearchivy.cz/matriky/L/CZ_215000010_00190_L2A5OAAQ_sign-120-15.zip) | matrika |  |  |  | 2 (J 2) |
 | [Litomyšl N 5/1784–2/1791, sign. 1302 (kód 7LD4PSX7)](https://aron.vychodoceskearchivy.cz/apu/b259a4de-8881-4932-b4d8-4bc3ac30afd6) | matrika | 1784–1791 |  |  | 3 (N 3) |
 | [Litomyšl N 3/1791–5/1802, sign. 1303 (kód 6AQHTLBH)](https://aron.vychodoceskearchivy.cz/apu/f6976c73-6eac-4f48-8ee7-3104a05785a6) | matrika | 1791–1802 |  |  | 2 (N 2) |
 | [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290) | matrika | 10/1850–1857 | 395 | 56501 | 9 (N 9) |
-| [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://storage.vychodoceskearchivy.cz/matriky/U/CZ_215000010_00190_UZIZVUY2_sign-1319.zip) | matrika |  |  |  | 2 (O 2) |
-| [Litomyšl Z 1820–1852, sign. 1331 (kód AZZOANBY)](https://storage.vychodoceskearchivy.cz/matriky/A/CZ_215000010_00190_AZZOANBY_sign-1331.zip) | matrika |  |  |  | 1 (Z 1) |
-| [Dobruška N 1799–1806 a Z 1799–1806, sign. 26-1 (kód RRGJJKAQ)](https://storage.vychodoceskearchivy.cz/matriky/R/CZ_215000010_00190_RRGJJKAQ_sign-26-1.zip) | matrika | 1799–1806 | 75 | 16718 | 16 (N 10 Z 6) |
-| [Dobruška Z vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip) | matrika | 1806–1843 | 14 | 4004 | 8 (Z 8) |
+| [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://aron.vychodoceskearchivy.cz/apu/482f65b0-be64-4814-8619-258279318187) | matrika |  |  |  | 2 (O 2) |
+| [Litomyšl Z 1820–1852, sign. 1331 (kód AZZOANBY)](https://aron.vychodoceskearchivy.cz/apu/7efe176a-1abe-4ca7-bc30-875e8334be75) | matrika |  |  |  | 1 (Z 1) |
+| [Dobruška N 1799–1806 a Z 1799–1806, sign. 26-1 (kód RRGJJKAQ)](https://aron.vychodoceskearchivy.cz/apu/e4e9e2f5-da2c-4a6a-af25-d8f2a8d0ccb0) | matrika | 1799–1806 | 75 | 16718 | 16 (N 10 Z 6) |
+| [Dobruška Z vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://aron.vychodoceskearchivy.cz/apu/be1a4e7b-0ad8-4683-97ba-c516976dffe9) | matrika | 1806–1843 | 14 | 4004 | 8 (Z 8) |
 | [Dobruška, rejstřík narozených 1799–1806, sign. 26-13 (kód XLDDPY2A)](https://storage.vychodoceskearchivy.cz/matriky/X/CZ_215000010_00190_XLDDPY2A_sign-26-13.zip) | matrika |  |  |  | 2 (J 2) |
 | [Dobruška, rejstřík zemřelých 1806–1886, sign. 26-3860 (kód TSIIQZJO)](https://storage.vychodoceskearchivy.cz/matriky/T/CZ_215000010_00190_TSIIQZJO_sign-26-3860.zip) | matrika |  |  |  | 5 (J 5) |
 | [Litomyšl Z 1864–1881, sign. 5411 (kód 6J44UBOZ)](https://aron.vychodoceskearchivy.cz/apu/26fa22af-989b-4af5-b291-69e9797c9606) | matrika |  |  |  | 10 (Z 10) |
@@ -719,7 +719,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [MB Z5, nemocnice Milosrdných bratří (Praha I), Z 1869–1899](https://katalog.ahmp.cz/pragapublica/permalink?xid=DADDBCE4DF754119BA67E4B0D2C69FD4) | matrika |  |  |  | 1 (Z 1) |
 | [UH N10, Uhříněves – Všech svatých, N 1808–1827](https://katalog.ahmp.cz/pragapublica/permalink?xid=DDCD4BCDBCE44DD58BBC7E62009CCAAC) | matrika |  |  |  | 2 (N 2) |
 | [Praha Nové Město – sv. Petr na Poříčí, PE N3O3, křty a sňatky 1712–1744](https://katalog.ahmp.cz/pragapublica/permalink?xid=DFC8108ADEBF422D94792E8F6C997F26) | matrika | 1712–1744 |  |  | 1585 (J 38 N 23 O 1524) |
-| [Žižkov – kostel sv. Rocha (Olšany), oddaní 1913](http://katalog.ahmp.cz/pragapublica/permalink?xid=EA2D6637E8D74212A4A8D5D1967F12DE) | matrika |  |  |  | 1 (O 1) |
+| [Žižkov – kostel sv. Rocha (Olšany), ŽKR O25 (1913–1914)](http://katalog.ahmp.cz/pragapublica/permalink?xid=EA2D6637E8D74212A4A8D5D1967F12DE) | matrika |  |  |  | 1 (O 1) |
 | [UH O10, Uhříněves – Všech svatých, O 1808–1826 (řazeno po obcích)](https://katalog.ahmp.cz/pragapublica/permalink?xid=EA9043BCFAC94EB6AB3BB2A5932CD581) | matrika |  |  |  | 1 (O 1) |
 | [UH O12, Uhříněves – Všech svatých, O 1842–1858](https://katalog.ahmp.cz/pragapublica/permalink?xid=ED4E1FFA6BD44B54821BC4C65029C70D) | matrika |  |  |  | 1 (O 1) |
 | [f39c172e](https://katalog.ahmp.cz/pragapublica/permalink?xid=F39C172E189811E9A48554D00686B80C&scan=2) | sčítání lidu |  |  |  | 1 (S 1) |
@@ -798,6 +798,16 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 |---|---|---|--:|--:|---|
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## zaopava (90)
 
@@ -921,13 +931,3 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
