@@ -66,7 +66,8 @@ knihy/<archiv>/<kniha>/
   vyklad.tsv      chyby písaře doložené jinými zápisy (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
 tools/
-  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů); běží u každého pull requestu
+  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů, u pull requestu i body
+                  k posouzení); běží u každého pull requestu
   hledej.py       volné hledání slova ve všech knihách (precteno, výklady, OCR s opravami; Levenshtein na začátku slova)
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv

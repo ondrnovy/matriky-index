@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
     paths: ["knihy/**", "tools/kontrola.py"]
+  # Spouští ho i kontrola-pr.yml po automatickém sloučení, které push workflow nespustí.
+  workflow_dispatch:
 jobs:
   kontrola:
     runs-on: ubuntu-latest

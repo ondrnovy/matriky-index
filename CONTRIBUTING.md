@@ -52,11 +52,20 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 
 ## Kontrola a schválení
 
-1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main` (formát, povinná pole, lhůty,
-   zákaz mazání; u přidaných řádků i tvar data, jistota a posunuté sloupce). Výsledek uvidíte u pull requestu: štítek
-   `kontrola-ok` nebo `kontrola-chyby` a při chybách komentář s výpisem. Totéž si spusťte předem.
-2. Správce projde změny a namátkou porovná několik řádků se skeny, i u přispěvatelů, kteří už přispěli. Chybné čtení
-   není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
+1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main`; totéž si spusťte předem. Výsledek
+   uvidíte u pull requestu jako štítek, při chybách nebo bodech k posouzení i s komentářem a výpisem:
+   - `kontrola-chyby` – formát, povinná pole, lhůty, smazané nebo změněné řádky, soubor, který do indexu nepatří (sken,
+     `PREHLED.md`), e-mail nebo cesta na disk, kniha, která už v indexu je pod jinou složkou. Opravte a pošlete změny
+     do téže větve, kontrola proběhne znovu.
+   - `k-posouzeni` – bez chyb, jen pár míst nechává kontrola na správci: rok mimo roky knihy, snímek za koncem knihy,
+     slovo příbuzenství nebo ztotožnění v `osoby` či `ostatni`, nové jméno v `cetl`, hodně nízké jistoty, víc než 150
+     řádků, strojové čtení, oprava nebo výklad, změna `kniha.yaml` existující knihy, nový archiv, soubor mimo `knihy/`.
+     Opravovat nic nemusíte, správce pull request projde a sloučí. Tato pravidla jsou zatím přísná a podle zkušeností
+     se budou povolovat.
+   - `kontrola-ok` – bez chyb i bez bodů k posouzení.
+2. Správce pull request projde a namátkou porovná několik řádků se skeny. U ověřených přispěvatelů se pull request se
+   štítkem `kontrola-ok` může sloučit sám; i takové správce namátkou vybírá k porovnání, před sloučením i po něm.
+   Chybné čtení není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
 3. Po sloučení se kniha sama objeví v [PREHLED.md](PREHLED.md).
 
 ## Licence
