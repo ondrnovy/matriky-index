@@ -6,6 +6,9 @@ farnost: "Dobruška (vesnice)"
 roky: "1806–1843"
 obsah: "po obcích; OCR snímky 74–87 (oddíl Pulice sn. 76–85, pag. 198–217); soubor = snímek; šedotónové JPEG 4078 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/be1a4e7b-0ad8-4683-97ba-c516976dffe9"
+import:
+  prefix: "dob2612"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

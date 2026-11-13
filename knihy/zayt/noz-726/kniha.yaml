@@ -5,6 +5,9 @@ farnost: "Přistoupim"
 roky: "1803–1840"
 obsah: "N 1816–1840 s opisy N 1803, 1805, 1808, O 1826–1838, Z 1819–1839, rejstříky; OCR snímky 2–20 (1 a 21 desky); soubor = snímek, obrázek oříznutý na knihu"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-726"
+import:
+  prefix: "noz726"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

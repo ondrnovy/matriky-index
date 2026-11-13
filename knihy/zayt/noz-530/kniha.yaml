@@ -6,6 +6,9 @@ farnost: "Hroubovice"
 roky: "1874–1895"
 obsah: "OCR snímky 2–73; soubor = snímek; oříznuté, šedotónové, poloviční rozlišení"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/noz-530"
+import:
+  prefix: "noz530"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

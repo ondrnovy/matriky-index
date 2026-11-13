@@ -6,6 +6,9 @@ farnost: "Nebužely (panství Řepín)"
 roky: "1778–1864"
 obsah: "N 1778–1862, O 1839/1850, Z 1831–1864 (19 snímků); OCR snímky 4–17 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-536"
+import:
+  prefix: "noz536"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

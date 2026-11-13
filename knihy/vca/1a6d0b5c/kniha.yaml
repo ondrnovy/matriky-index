@@ -7,6 +7,9 @@ roky: "1725–1785"
 obsah: "N farnosti Choceň a filiálek chronologicky (sloupce Locus, Dies, Nomen prolis, Nomina et conditio parentum, Levans, Testes, Baptisans), stránkováno (snímek 321 = s. 620–621, 330 = s. 638–639); snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/1a6d0b5c-5f05-41fe-8bc6-27540ddbae5c"
 poznamka: "OCR jen snímky 270–390 (asi 1752–1766) ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; jinak jen jednotlivé stránky očima"
+import:
+  prefix: "chocen2095"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -5,6 +5,9 @@ farnost: "Horažďovice"
 roky: "1699–1747"
 obsah: "Z (snímky 185–252) a O (269–322); oddíl N je v horazdovice-05"
 url: "https://www.portafontium.eu/register/soap-pn/horazdovice-05"
+import:
+  prefix: "horazdovice-05"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

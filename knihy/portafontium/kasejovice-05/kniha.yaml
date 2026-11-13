@@ -6,6 +6,9 @@ farnost: "Kasejovice"
 roky: "1690–1747"
 obsah: "O 1690–1747 (snímky 3–210); snímek 3 = str. 54–55 (1704–1705)"
 url: "https://www.portafontium.eu/register/soap-pn/kasejovice-05"
+import:
+  prefix: "kasejovice-05"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -5,6 +5,9 @@ farnost: "Dolní Lukavice"
 roky: "1682–1765"
 obsah: "N 1682–1765 (snímky 3–370); soubor = snímek×10+1 (354–358: +2)"
 url: "https://www.portafontium.eu/register/soap-pn/dolni-lukavice-01"
+import:
+  prefix: "dolni-lukavice-01"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -6,6 +6,9 @@ farnost: "Přeštice"
 roky: ""
 obsah: "rejstřík (index); OCR téměř prázdné (modré sloupce); snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/prestice-38"
+import:
+  prefix: "prestice-38"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

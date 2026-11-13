@@ -7,6 +7,9 @@ roky: "1771–1787"
 obsah: "latinsky; N 1771–1783 asi sn. 5–95 (1778 ≈ sn. 47–52, 1780 ≈ 63–70), N 1784–1787 tabulkově asi sn. 99–140; O asi sn. 145–200 (1778 = sn. 165–166); Z asi sn. 201–275; obce filiálky Slavoňov mj. Janov, Ohnišov, Bohdašín, Sendraž, Mezilesí; snímky 1–276; soubor = snímek; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49"
 poznamka: "OCR celé knihy ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; zápisy přečtené očima v precteno.tsv"
+import:
+  prefix: "nh1172"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

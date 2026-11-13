@@ -6,6 +6,9 @@ farnost: "Ruda nad Moravou (Bohdíkov, Bušín, Hartíkov, Hostice, Jakubovice, 
 roky: "1701–1757"
 obsah: "N 1701–1757 asi sn. 1–249 (sn. 200 = I 1749), O asi sn. 250–363 (sn. 360 = I 1747), Z dál; OCR snímky 1–80 (N 1701–1720), 160–228 (N X 1738 – asi 1757), 250–372 (O 1701–1757) a 373–540 (Z 1701 – asi 1740); soubor = snímek; poloviční rozlišení, šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263"
+import:
+  prefix: "ruda1701"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

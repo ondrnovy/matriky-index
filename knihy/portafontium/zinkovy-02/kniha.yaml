@@ -6,6 +6,9 @@ farnost: "Žinkovy"
 roky: "1683–1715"
 obsah: "N (snímky 4–128), O (129–155), Z (156–167); OCR jen N a O"
 url: "https://www.portafontium.eu/register/soap-pn/zinkovy-02"
+import:
+  prefix: "zinkovy-02"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

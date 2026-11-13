@@ -5,6 +5,9 @@ farnost: "Hrochův Týnec"
 roky: "1839–1882"
 obsah: "OCR snímky 41–46 a 51–58 (asi 1855–1857 a 1861–1866); soubor = snímek; zápisy svisle, OCR z oříznutých a otočených obrázků (soubor -r)"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/z-236"
+import:
+  prefix: "z236"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

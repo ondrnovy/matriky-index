@@ -6,6 +6,9 @@ farnost: "Ruda nad Moravou (Bušín, Hostice, Olšany, Dolní Bohdíkov, Klášt
 roky: "1757–1771"
 obsah: "N str. 1–107, O str. 123–162, Z str. 184–239, rejstříky N a O (do 1792); OCR snímky 1–131 bez sn. 45 (portál nevydal); soubor = snímek; poloviční rozlišení, šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263"
+import:
+  prefix: "ruda1757"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -6,6 +6,9 @@ farnost: "Přeštice"
 roky: "1722–1756"
 obsah: "NOZ 1722–1756; OCR jen N soubory 1580–2520 a 3670–3810 (asi 1743–1756) a O 3300–3620 (asi 1743–1/1756); snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/prestice-02"
+import:
+  prefix: "prestice-02"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

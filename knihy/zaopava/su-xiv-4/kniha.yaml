@@ -6,6 +6,9 @@ farnost: "Ruda nad Moravou (Bartoňov, Bohdíkov, Bušín, Hartíkov, Hostice, J
 roky: "1772–1778"
 obsah: "po obcích, u každé N, O, Z (Bušín str. 1–72); OCR snímky 1–177; soubor = snímek; obrázky v polovičním rozlišení, šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263"
+import:
+  prefix: "ruda4"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

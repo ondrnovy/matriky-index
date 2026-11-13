@@ -6,6 +6,9 @@ farnost: "Litomyšl"
 roky: "10/1850–1857"
 obsah: "N Litomyšl město a předměstí (Dolní a Horní předměstí, Lány, Zahájí, Záhradí); snímky 1–395; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290"
+import:
+  prefix: "lit1309"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

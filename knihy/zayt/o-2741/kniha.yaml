@@ -6,6 +6,9 @@ farnost: "Karlín (krajský rabín Kouřimska; snoubenci z celého kraje)"
 roky: "1848–1856"
 obsah: "„Trauungs-Matrik“, tištěný formulář přes dvojstranu, 4 posty na stranu (sn. 20 = pag. 18, 1854); OCR snímky 3–35; soubor = snímek, obrázek oříznutý na knihu, šedotónový"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/o-2741"
+import:
+  prefix: "o2741"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

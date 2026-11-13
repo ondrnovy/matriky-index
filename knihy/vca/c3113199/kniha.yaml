@@ -6,6 +6,9 @@ farnost: "Deštné v Orlických horách"
 roky: "1784–1849"
 obsah: "O 6/1784–1849, německy; snímky 1–71; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/c3113199-3a1e-42e1-9ea0-742a7f22d89e"
+import:
+  prefix: "destne247"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

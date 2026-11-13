@@ -6,6 +6,9 @@ farnost: "Libeň (snoubenci i z venkova – Přistoupim, Poříčany, Cerhenice 
 roky: "1833–1849"
 obsah: "ručně linkovaná tabulka přes dvojstranu (sn. 10 = pag. 12–13, rok 1837); OCR snímky 4–17; soubor = snímek, obrázek oříznutý na knihu, šedotónový"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/o-2745"
+import:
+  prefix: "o2745"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

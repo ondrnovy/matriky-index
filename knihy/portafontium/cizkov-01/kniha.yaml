@@ -6,6 +6,9 @@ farnost: "Čížkov"
 roky: "1701–1720"
 obsah: "N 1701–1720 (soubory 0031–0491), O (0501–0621); OCR jen N a O; snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/cizkov-01"
+import:
+  prefix: "cizkov-01"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

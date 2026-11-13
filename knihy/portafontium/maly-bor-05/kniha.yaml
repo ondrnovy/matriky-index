@@ -5,6 +5,9 @@ farnost: "Malý Bor"
 roky: "1745–1763"
 obsah: "N 1745–1763 (snímky 3–99), O (100–141), Z (142–176); navíc soubor 1205-o"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-05"
+import:
+  prefix: "maly-bor-05"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

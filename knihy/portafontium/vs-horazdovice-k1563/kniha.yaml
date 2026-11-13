@@ -6,6 +6,9 @@ farnost: "Malý Bor, Kvasňovice (Olšany, Pačejov, Týřovice, Velešice)"
 roky: "1726–1817"
 obsah: "pozemková kniha; OCR celé knihy kromě souboru 3740; soubor vs-horazdovice-k1563_NNNN, snímek = NNNN/10"
 url: "https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1563"
+import:
+  prefix: "vs-horazdovice-k1563"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -5,6 +5,9 @@ farnost: "Dnešice"
 roky: "1735–1770"
 obsah: "OCR jen snímky 55–75 (N 1746–1752) a 162–173 (O 1735–1744) – test přesnosti"
 url: "https://www.portafontium.eu/register/soap-pn/dnesice-02"
+import:
+  prefix: "dnesice-02"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

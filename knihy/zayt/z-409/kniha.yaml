@@ -6,6 +6,9 @@ farnost: "Heřmanův Městec (rabinát; Hroubovice, Chrast …)"
 roky: "1875–1944"
 obsah: "Z 1875–1944; OCR snímky 45–95 (asi 1892–1914), skeny poloviční rozlišení, otočené (přípona -r); soubor = snímek"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/z-409"
+import:
+  prefix: "z409"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -6,6 +6,9 @@ farnost: "Merklín"
 roky: ""
 obsah: "rejstřík (index) N po písmenech, sloupce datum | jméno | ves | strana; snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/merklin-30"
+import:
+  prefix: "merklin-30"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

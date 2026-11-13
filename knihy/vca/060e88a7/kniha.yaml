@@ -6,6 +6,9 @@ farnost: "Nové Město nad Metují"
 roky: "1642–1905"
 obsah: "rejstřík oddaných celé farnosti po písmenech, v písmeni chronologicky (rok, ženich, obec, nevěsta, folio); OCR jen písmeno S (snímky 86–104: S 1700–1842 = sn. 89–93, 1842–1899 = 94–96; Š/Sch dál); soubor = snímek; šedotónové JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/060e88a7-18e2-419a-8e49-b958f7b76396"
+import:
+  prefix: "nmnm1147333"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

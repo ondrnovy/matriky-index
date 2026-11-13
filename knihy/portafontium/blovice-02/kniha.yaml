@@ -6,6 +6,9 @@ farnost: "Blovice"
 roky: "1688–1720"
 obsah: "N 1688–1720 (snímky 3–137)"
 url: "https://www.portafontium.eu/register/soap-pn/blovice-02"
+import:
+  prefix: "blovice-02"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

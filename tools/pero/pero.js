@@ -73,7 +73,7 @@ async function nahrajZUrl(seznam) {
 
 // Na libovolné stránce PERO po dokončení OCR: složí PAGE XML všech stran dokumentu do jednoho souboru (PERO u velkých
 // dokumentů na vlastní export odpovídá chybou 504) a nabídne ho ke stažení jako <nazev>.pagexml.txt. Lokálně ho
-// zabalit do <nazev>.pagexml.zip pro tools/pero_import.py (název = klíč v EXPORTS).
+// zabalit do <nazev>.pagexml.zip pro tools/pero_import.py (název = `export` v položce ocr v kniha.yaml).
 async function exportuj(dokument, nazev) {
   const h = await (await fetch("/ocr/show_results/" + dokument)).text();
   const d = new DOMParser().parseFromString(h, "text/html");

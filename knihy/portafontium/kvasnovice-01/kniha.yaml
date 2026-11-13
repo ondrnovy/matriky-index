@@ -5,6 +5,9 @@ farnost: "Kvasňovice"
 roky: "1738–1765"
 obsah: "N 1738–1765 (snímky 3–62), Z (62–105), O 1738–1765 (106–127); česky, od asi 1763 latinsky"
 url: "https://www.portafontium.eu/register/soap-pn/kvasnovice-01"
+import:
+  prefix: "kvasnovice-01"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

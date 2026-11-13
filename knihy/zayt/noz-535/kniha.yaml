@@ -6,6 +6,9 @@ farnost: "Nebovidy (Kolín)"
 roky: "1788–1863"
 obsah: "N 1788–1860, O 1824–1857, Z 1829–1863 (31 snímků); OCR snímky 4–12, 14–15, 17–29 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-535"
+import:
+  prefix: "noz535"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

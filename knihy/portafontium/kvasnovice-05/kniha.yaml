@@ -5,6 +5,9 @@ farnost: "Kvasňovice"
 roky: "1784–"
 obsah: "Z od 1784 (snímky 3–128, 37 a 52 chybí); česky, tabulky"
 url: "https://www.portafontium.eu/register/soap-pn/kvasnovice-05"
+import:
+  prefix: "kvasnovice-05"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

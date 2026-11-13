@@ -6,6 +6,9 @@ farnost: "Litomyšl"
 roky: "1864–1906"
 obsah: "rejstřík zemřelých celé farnosti (město, předměstí i vesnice); snímky 1–229; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b"
+import:
+  prefix: "lit7492"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

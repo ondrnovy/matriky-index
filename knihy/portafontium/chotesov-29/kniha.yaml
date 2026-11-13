@@ -6,6 +6,9 @@ farnost: "Chotěšov"
 roky: ""
 obsah: "rejstřík (index); snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/chotesov-29"
+import:
+  prefix: "chotesov-29"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -7,6 +7,9 @@ roky: "1670–1703"
 obsah: "N, O, Z 1670–1703 (209 souborů: N přípona -n, O soubory 1340–1820, Z -z); OCR jen oddíl O; snímek = číslo souboru Porta fontium (v precteno.tsv s příponou, např. 0100-o)"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-02"
 poznamka: "zápisy přečtené při práci na rodokmenu; jen vybrané zápisy, ne celá kniha"
+import:
+  prefix: "maly-bor-02"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

@@ -5,6 +5,9 @@ farnost: "Kostelec nad Černými lesy"
 roky: "1840–1862"
 obsah: "N 1840–1862 fol. 1–10 (fol. 9 = sn. 11, fol. 10 = sn. 12), O 1840–1862 fol. 17–19 = sn. 13–15 (posty 1–19), Z 1840–1862 fol. 24–30 = sn. 16–22, společný rejstřík N+O+Z (folio/post) pag. 40–46 = sn. 23–29, sn. 30 závěrečná doložka; OCR snímky 15–31; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372"
+import:
+  prefix: "noz372"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

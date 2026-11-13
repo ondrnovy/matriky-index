@@ -6,6 +6,9 @@ farnost: "Dobruška (Pulice, Pohoří …)"
 roky: "1799–1806"
 obsah: "fol. = snímek + 2 (sn. 45 = fol. 47, XI–XII 1799); OCR snímky 115–189 (úmrtní oddíl, bez rejstříku); soubor = snímek; šedotónové JPEG 4078 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/e4e9e2f5-da2c-4a6a-af25-d8f2a8d0ccb0"
+import:
+  prefix: "dob261"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

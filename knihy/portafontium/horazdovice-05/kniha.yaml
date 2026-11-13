@@ -5,6 +5,9 @@ farnost: "Horažďovice"
 roky: "1699–1747"
 obsah: "OCR jen N 1699–1747 (snímky 4–184 a 254–267); Z (185–252) a O (269–322) bez OCR; snímky 133–184 a 254–267 i druhé čtení modelem Kurrent (ocr-pero-kurrent.tsv)"
 url: "https://www.portafontium.eu/register/soap-pn/horazdovice-05"
+import:
+  prefix: "horazdovice-05"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

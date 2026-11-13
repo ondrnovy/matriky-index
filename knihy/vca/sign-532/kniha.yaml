@@ -6,6 +6,9 @@ farnost: "Uhersko (Uhersko, Trusnov, Opočno, Franclina; Radhošť a Jaroslav 17
 roky: "10/1782–11/1853"
 obsah: "O po obcích (Uhersko, Opočno, Trusnov, Franclina); snímky 1–114; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/725df1cf-5048-422a-87c4-e2ca07dde72a"
+import:
+  prefix: "uhersko532"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

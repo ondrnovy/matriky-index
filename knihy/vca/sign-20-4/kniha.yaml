@@ -6,6 +6,9 @@ farnost: "Červený Kostelec"
 roky: "1785–1814"
 obsah: "N, Z, O 1785–1814 po obcích; snímky 1–149; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/df9d1ae5-8641-4ce5-83f6-c5ff756dc1d7"
+import:
+  prefix: "ckostelec204"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

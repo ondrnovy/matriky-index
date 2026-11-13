@@ -7,6 +7,9 @@ roky: "1723–1797"
 obsah: "N 10.1723–3.1776 chronologicky pro všechny obce (bez oddílů, obec v levém sloupci „dies et locus originis“; bez rejstříku): snímek 100 = pag. 188–189, 114 = pag. 216–217 (leden 1749), 117 = začátek 1750, 123 = začátek 1752, 126 = začátek 1753, 144 = září–říjen 1755, 145 = listopad 1755 – leden 1756, 149 = podzim 1756 – leden 1757, 150 = 1757 (leden–březen), 151 = duben–červenec 1757, 152 = srpen–listopad 1757, 153 = listopad 1757 – leden 1758, 154 = leden–březen 1758, 155 = březen–červen 1758, 156 = červenec–listopad 1758, 157 = listopad 1758 – únor 1759, 158 = únor–březen 1759, 160 = červenec–srpen 1759, 170 = srpen–září 1761, 206 = květen–červen 1769; Z od asi sn. 240 (1760–1761; 306 = asi 1765), O od asi sn. 400 (1759 = sn. 431, 1773 = sn. 463, 1792 = sn. 485); snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45"
 poznamka: "OCR celé knihy (sn. 1–490) ze šedotónových JPEG 2400 px; soubor = snímek; zip v ARON má 490 snímků (ARON počítá 3 soubory na snímek); N 1723–1747 česky, od 1748 latinsky, od asi 1770 tabulky"
+import:
+  prefix: "opocno1201"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

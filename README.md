@@ -117,12 +117,12 @@ v knize není. Zásah se ověřuje na skenu (snímek a strana jsou ve výpisu).
 
 Celý postup (skeny podle archivu, nahrání do PERO, rozbor rozložení, volba modelu, export a import) je v
 [PERO.md](PERO.md). Zkráceně: skeny do PERO (Porta fontium a Acta Publica přímo z prohlížeče, ostatní z disku),
-„Handwritten layout“, OCR „Kurrent (German, Czech)“ pro kurent, „Czech Handwritten“ pro latinku, export, doplnit
-`BOOKS` a `EXPORTS` v `tools/pero_import.py` a spustit `python tools/pero_import.py <export.zip>`.
+„Handwritten layout“, OCR „Kurrent (German, Czech)“ pro kurent, „Czech Handwritten“ pro latinku, export, popis
+exportu do `kniha.yaml` knihy a `python tools/pero_import.py <export.zip>`. Import čte vše z dat, do kódu se nesahá.
 
-Strojový text z jiného nástroje (Transkribus, ScribbleSense) se importuje stejně, z exportu PAGE XML: v `EXPORTS` se
-u něj uvede `cteni` (přípona souborů), `nastroj`, `model` a `nastaveni`, případně `modely`, když export míchá víc
-modelů. Vznikne `ocr-<cteni>.tsv` a `stranky-<cteni>.tsv` vedle stávajících čtení a položka v `ocr` v `kniha.yaml`.
+Strojový text z jiného nástroje (Transkribus, ScribbleSense) se importuje stejně, z exportu PAGE XML: položka v `ocr`
+má vlastní `soubor` (`ocr-<cteni>.tsv`), `nastroj`, `model` a `nastaveni`; když export míchá víc modelů, má každý
+model svou položku s `model_id`. Vznikne `ocr-<cteni>.tsv` a `stranky-<cteni>.tsv` vedle stávajících čtení.
 Česká kurzíva 17.–18. století: Transkribus „Czech Handwriting M1“ čte jména zhruba dvakrát lépe než PERO; latinu a
 kurent PERO stejně dobře nebo lépe.
 

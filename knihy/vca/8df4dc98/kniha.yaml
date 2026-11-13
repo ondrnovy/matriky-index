@@ -7,6 +7,9 @@ roky: "1721–1771"
 obsah: "latinsky, souvislý text; N 1721–1750 asi sn. 1–99 (1738 ≈ sn. 56, 1747 ≈ 87–89; fol. f ≈ sn. f+5 až f+6 P), N 1751–1771 asi sn. 100–193 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ 163–166, 1770 ≈ 186–190); O sn. 199–258 L (1722–1769, 1744–1769 ≈ sn. 220–258), sňatky 1769–1771 vloženy na sn. 193 R–197 L (fol. 61–64); Z asi sn. 283–318 (1743–1769); 319 snímků; soubor = snímek; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a"
 poznamka: "OCR snímků 1–319 ze šedotónových JPEG 2400 px ve dvou dokumentech PERO; zápisy přečtené očima v precteno.tsv"
+import:
+  prefix: "nh1171"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

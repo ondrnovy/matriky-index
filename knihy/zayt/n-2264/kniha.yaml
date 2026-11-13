@@ -6,6 +6,9 @@ farnost: "Uhlířské Janovice"
 roky: "1808–1839"
 obsah: "N 1808–1839 (41 snímků; rejstřík sn. 5–12, popis rodin 1811 sn. 16–21); OCR snímky 16–21, 24–29, 32–33, 35–38 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/n-2264"
+import:
+  prefix: "n2264"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

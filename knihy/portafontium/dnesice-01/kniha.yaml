@@ -5,6 +5,9 @@ farnost: "Dnešice"
 roky: "1685–1735"
 obsah: "N 1685–1735 (snímky 3–151), O 1685–1735 (152–192), Z 1685–1735 (193–247, neOCRováno)"
 url: "https://www.portafontium.eu/register/soap-pn/dnesice-01"
+import:
+  prefix: "dnesice-01"
+  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

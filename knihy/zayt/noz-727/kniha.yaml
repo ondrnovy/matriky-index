@@ -5,6 +5,9 @@ farnost: "Přistoupim"
 roky: "1840–1858"
 obsah: "N 1841–1858 s rejstříkem, O 1840–1853, Z 1843–1853; OCR snímky 2–13 (1 a 14 desky); soubor = snímek, obrázek oříznutý na knihu"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727"
+import:
+  prefix: "noz727"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

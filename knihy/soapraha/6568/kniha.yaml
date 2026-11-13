@@ -5,6 +5,9 @@ farnost: "Kněževes"
 roky: "1735–1810"
 obsah: "OCR snímky 84–125 (O 1761–1810); soubor = číslo snímku v eBadatelně"
 url: "https://ebadatelna.soapraha.cz/d/6568/"
+import:
+  prefix: ""
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

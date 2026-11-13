@@ -5,6 +5,9 @@ farnost: "Zájezdec"
 roky: "1839, 1841–1868"
 obsah: "OCR snímky 22–34; soubor = snímek; zápisy jsou psané svisle, OCR je z obrázků otočených o 90° po směru hodinových ručiček (soubor -r)"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/o-2434"
+import:
+  prefix: "o2434"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

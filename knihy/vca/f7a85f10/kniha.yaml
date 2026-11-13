@@ -6,6 +6,9 @@ farnost: "Velký Uhřínov"
 roky: "1784–1837"
 obsah: "O 1784–1837; snímky 1–39 (sn. 2–24 chronologicky 1784–1837, sn. 25–39 podle letopočtů v OCR znovu 1784–1795 – jiná řada?); soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643"
+import:
+  prefix: "uhrinov1712797"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

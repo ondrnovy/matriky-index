@@ -6,6 +6,9 @@ farnost: "Rokytnice v Orlických horách"
 roky: "1812–1857"
 obsah: "O 5/1812–1857 (Rokytnice, Hanička, Panské Pole, Julinčino Údolí, Údolíčko, Rýnek, Václavova Seč), německy; snímky 1–171; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/0484f35a-faa1-428b-b53c-b3fbe9171eba"
+import:
+  prefix: "rokytnice13811"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

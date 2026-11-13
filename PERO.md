@@ -48,12 +48,30 @@ nejdřív zkontroluj náhled jednoho souboru. Číslo v názvu souboru je čísl
 1. Malý dokument: `https://pero-ocr.fit.vutbr.cz/document/download_document_pages/<dokument>`. Velký (stovky stran,
    PERO vrací 504): v konzoli `await exportuj("<dokument>", "<název>")`, kliknout na žlutý odkaz a stažený
    `<název>.pagexml.txt` zabalit do `<název>.pagexml.zip`.
-2. Knihu doplnit do `BOOKS` a export do `EXPORTS` v `tools/pero_import.py` (archiv, název, roky, obsah, url,
-   prefix souborů, `delitel` = jak z čísla souboru dostat snímek; PERO dokument, model, datum).
-3. `python tools/pero_import.py <název>.pagexml.zip` → `knihy/<archiv>/<kniha>/ocr-pero.tsv` a `stranky.tsv`.
-   Jiný model nebo nástroj (druhé čtení téže knihy) dostane v `EXPORTS` vlastní `cteni` a soubory
-   `ocr-<cteni>.tsv`, `stranky-<cteni>.tsv`; stávající čtení zůstane. Export PAGE XML z Transkribusu nebo
-   ScribbleSense se importuje stejně.
+2. Popis exportu patří do `knihy/<archiv>/<kniha>/kniha.yaml` (do kódu se nesahá, pull request pak mění jen data):
+
+   ```yaml
+   archiv: "vca"
+   kniha: "sign-532"
+   nazev: "Uhersko O 1782–1853, sign. 532"
+   url: "https://aron.vychodoceskearchivy.cz/apu/…"
+   import:
+     prefix: "uhersko532"   # název obrázku před „_<číslo>“; prázdný, když je v exportu jen tato kniha
+     delitel: 1             # snímek = číslo souboru // delitel (Porta fontium 10, soubory po jedné 1)
+   ocr:
+   - soubor: "ocr-pero.tsv"
+     nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+     dokument: "<id dokumentu v PERO>"
+     model: "Kurrent (German, Czech)"
+     datum: "2026-11-13"
+     export: "uhersko-o-532.pagexml.zip"
+   ```
+
+   Export pro víc knih: každá kniha má svůj `kniha.yaml` se stejným `export` a svým `prefix`.
+3. `python tools/pero_import.py <název>.pagexml.zip` → `knihy/<archiv>/<kniha>/ocr-pero.tsv` a `stranky.tsv`;
+   import doplní do položky `ocr` snímky, počty stran a řádků. Jiný model nebo nástroj (druhé čtení téže knihy)
+   dostane vlastní položku v `ocr` se `soubor: "ocr-<cteni>.tsv"`; stávající čtení zůstane. Export PAGE XML
+   z Transkribusu nebo ScribbleSense se importuje stejně; když míchá víc modelů, rozliší je `model_id`.
 
 ## 5. Hledání a čtení
 

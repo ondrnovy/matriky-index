@@ -5,6 +5,9 @@ farnost: "Heřmanův Městec"
 roky: "1839–1850"
 obsah: "OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků oříznutých na knihu a otočených o 90° po směru hodinových ručiček (soubor -r)"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/o-406"
+import:
+  prefix: "o406"
+  delitel: 1
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
