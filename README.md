@@ -24,13 +24,10 @@ Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE
 
 ## Kdo četl
 
-Sloupec `cetl` v `precteno.tsv` uvádí u jazykového modelu jeho identifikátor a nastavení effortu (`claude-sonnet-5-5/xhigh`),
-aby šlo zápisy přečtené slabším modelem nebo s nižším effortem najít a přečíst znovu lepším. Na kvalitu čtení má vliv
-i rozlišení skenu (1600 px vs. výřez 4000 px); to uvádí sloupec `ostatni`, pokud je známé.
-
-Řádky z let 2026-10 a 2026-11 dostaly model a effort dodatečně (`precteno.tsv` 2026-11-04, `opravy.tsv` 2026-11-05)
-podle záznamů sezení Claude Code, kde je u každého dotazu uložen model i effort; dřív v nich stálo jen `agent` nebo
-`Claude`. Stejné pravidlo platí pro sloupec `kdo` v `opravy.tsv` a `vyklad.tsv`.
+Sloupec `cetl` v `precteno.tsv` (a stejně `kdo` v `opravy.tsv` a `vyklad.tsv`) uvádí u jazykového modelu jeho
+identifikátor a nastavení effortu (`claude-sonnet-5-5/xhigh`), aby šlo zápisy přečtené slabším modelem nebo s nižším
+effortem najít a přečíst znovu lepším. Na kvalitu čtení má vliv i rozlišení skenu (1600 px vs. výřez 4000 px); to
+uvádí sloupec `ostatni`, pokud je známé.
 
 Id modelu se píše, jak ho uvádí API (`claude-opus-5-5`, `gpt-5.2`, `o3`, `gemini-2.5-pro`, `grok-4`). Effort je
 hodnota, jak ji nástroj nastavuje: `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, `max` (Anthropic, OpenAI,
