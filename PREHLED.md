@@ -3,7 +3,7 @@
 Stav k 13. 11. 2026 (generuje `python tools/prehled.py`).
 
 - **766 knih** (matrika 692, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
-- **8 758 stran** převedených strojově (PERO OCR), **1 592 242 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **8 758 stran** převedených strojově (PERO OCR), **1 593 988 řádků** strojového textu – nekontrolovaný, slouží k hledání
 - **22 174 zápisů přečtených očima**: narození 9800, sňatky 8480, úmrtí 3164, převody gruntů 49, soupisy 193, jiné 459
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
@@ -133,7 +133,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 1249 (poř.č. 2109), 1710-1761 – Dolní Újezd NOZ](https://aron.vychodoceskearchivy.cz/apu/101361cd-0328-4eba-a7d0-a4caf32e7567) | matrika |  |  |  | 4 (N 2 O 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 1704 (poř.č. 9046), 1806-1823](https://aron.vychodoceskearchivy.cz/apu/1091221e-03f0-4a16-8fec-847486b18675) | matrika | 1806–1823 |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 26-10 (poř.č. 1751), 1806-1843](https://aron.vychodoceskearchivy.cz/apu/11288369-9a18-4ffe-bd74-ddb8dd721cc5) | matrika |  |  |  | 2 (O 2) |
-| [Sbírka matrik Východočeského kraje, sign.: 120-1 (poř.č. 8227), 1723-1797 – Opočno NOZ (Opočno, Podchlumí, Pohoří, Puličky, Semechnice, Trnov)](https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45) | matrika | 1723–1797 | 490 | 86215 | 85 (J 2 N 54 O 11 Z 18) |
+| [Sbírka matrik Východočeského kraje, sign.: 120-1 (poř.č. 8227), 1723-1797 – Opočno NOZ (Opočno, Podchlumí, Pohoří, Puličky, Semechnice, Trnov)](https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45) | matrika | 1723–1797 | 490 | 87028 | 85 (J 2 N 54 O 11 Z 18) |
 | [Sbírka matrik Východočeského kraje, sign.: 56-3 (poř.č. 3937), 1804-1863](https://aron.vychodoceskearchivy.cz/apu/139956a9-30ea-4b7f-815b-09725b1f8d96) | matrika |  |  |  | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-5 (poř.č. 3317), 1784-1794](https://aron.vychodoceskearchivy.cz/apu/13e7e081-a5e5-4b3b-9946-e71389e3c8b9) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 25-2 (poř.č. 1681), 6.1808-4.1839](https://aron.vychodoceskearchivy.cz/apu/1697219c-42e0-497c-b459-055488bb208e) | matrika |  |  |  | 4 (N 4) |
@@ -327,7 +327,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 53-31 (poř.č. 3690), 1835-1847](https://aron.vychodoceskearchivy.cz/apu/f700e507-6ab1-4b2c-932b-88c02b03df39) | matrika | 1835–1847 |  |  | 1 (N 1) |
 | [Okresní úřad Rychnov nad Kněžnou I, inv. č.: 2279, 1869 – Petrovice - Velké Petrovice čp. 1-41](https://aron.vychodoceskearchivy.cz/apu/f746dc94-3c93-40ac-af5e-004ab28415c5) | sčítání lidu | 1869 |  |  | 1 (S 1) |
 | [Okresní úřad Rychnov nad Kněžnou I, inv. č.: 2281, 1890 – Petrovice - Velké Petrovice čp. 1 - 48 obydlená obecní kůlna čp. 0](https://aron.vychodoceskearchivy.cz/apu/f77dadc3-d324-4fc6-a48b-dd253a057052) | sčítání lidu | 1890 |  |  | 1 (S 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 171-2797 (poř.č. 12181), 1784-1837 – Velký Uhřínov O](https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643) | matrika | 1784–1837 | 39 | 8177 | 8 (O 8) |
+| [Sbírka matrik Východočeského kraje, sign.: 171-2797 (poř.č. 12181), 1784-1837 – Velký Uhřínov O](https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643) | matrika | 1784–1837 | 39 | 9110 | 8 (O 8) |
 | [Sbírka matrik Východočeského kraje, sign.: 181-3503 (poř.č. 12669), 1851-1894 – římskokatolická matrika ODDANÝCH, římskokatolický index ODDANÝCH, Vysoké Veselí (3.1851-10.1894), Veselská Lhota (2.1851-10.1894), Velešice (9.1851-11.1893), Hrobičany (do 11.1894), Sběř (do 5.1894), Volanice (10.1851-5.1894)](https://aron.vychodoceskearchivy.cz/apu/f806a3d0-3902-4d7b-8f09-ebaf8bdebb46) | matrika | 1851–1894 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 14-2 (poř.č. 709), 1799-1827](https://aron.vychodoceskearchivy.cz/apu/f8150aa3-5756-4adf-9229-49146d4763b9) | matrika |  |  |  | 14 (N 14) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-5 (poř.č. 11267), 1812-1872](https://aron.vychodoceskearchivy.cz/apu/f816fc1e-f00f-4609-819e-02e11e8765a7) | matrika |  |  |  | 6 (N 2 O 2 Z 2) |
@@ -754,19 +754,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## cuzk (8)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
-| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
-| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
-| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
-| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
 ## zaopava (42)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -814,15 +801,18 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1850–1898, sign. Zá IV 7, inv. č. 8382](https://digi.archives.cz/da/permalink/be97f934-f13c-102f-8255-0050568c0263) | matrika | 1850–1898 |  |  | 7 (N 7) |
 | [Dubicko (fara), O, I-O Bohuslavice, Brníčko, Dubicko, Hrabová, Kolšov, Lesnice, Strupšín, Třeština 1784–1809, sign. Zá IV 9, inv. č. 8384](https://digi.archives.cz/da/permalink/be97aa74-f13c-102f-8255-0050568c0263) | matrika | 1784–1809 |  |  | 1 (O 1) |
 
-## ndk (5)
+## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
+| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
+| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
+| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
+| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 
 ## nacr (10)
 
@@ -838,3 +828,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
 | [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
 | [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
