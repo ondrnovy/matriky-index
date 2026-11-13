@@ -1,0 +1,20 @@
+archiv: "vca"
+kniha: "sign-532"
+nazev: "Uhersko O 1782–1853, sign. 532 (kód PTMXFXYU)"
+druh: "matrika"
+farnost: "Uhersko (Uhersko, Trusnov, Opočno, Franclina; Radhošť a Jaroslav 1782–1784)"
+roky: "10/1782–11/1853"
+obsah: "O po obcích (Uhersko, Opočno, Trusnov, Franclina); snímky 1–114; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
+url: "https://aron.vychodoceskearchivy.cz/apu/725df1cf-5048-422a-87c4-e2ca07dde72a"
+ocr:
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "a0371923-62ad-4564-8525-8ba4f08b16f5"
+  model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
+  datum: "2026-11-13"
+  export: "uhersko-o-532.pagexml.zip"
+  snimky: "1–114"
+  stranek: 114
+  radku: 18538
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
