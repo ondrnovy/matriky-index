@@ -40,3 +40,30 @@ ocr:
   stranek: 2
   radku: 174
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-old-czech.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-trocr-kurrent-xvi-xvii.tsv"
+  nastroj: "TrOCR (Hugging Face transformers), spuštěno lokálně na procesoru"
+  model: "dh-unibe/trocr-kurrent-XVI-XVII (Hugging Face)"
+  nastaveni: "řádky z rozložení PERO (obdélník řádku + 4 px okraj), dekódování greedy (num_beams 1), nejvýš 96 tokenů na řádek; float32"
+  datum: "2026-11-10"
+  snimky: "15, 17, 105, 410, 414"
+  stranek: 5
+  radku: 577
+  poznamka: "test nástrojů na řádcích z ocr-pero.tsv (souřadnice a rozměry obrázku viz stranky-trocr-kurrent-xvi-xvii.tsv); TrOCR jistotu nedává; text je strojový, nekontrolovaný"
+- soubor: "ocr-trocr-kurrent-xvi-xvii-int8.tsv"
+  nastroj: "TrOCR (Hugging Face transformers), spuštěno lokálně na procesoru"
+  model: "dh-unibe/trocr-kurrent-XVI-XVII (Hugging Face)"
+  nastaveni: "řádky z rozložení PERO (obdélník řádku + 4 px okraj), dekódování greedy (num_beams 1), nejvýš 96 tokenů na řádek; dynamická kvantizace int8 (lineární vrstvy)"
+  datum: "2026-11-10"
+  snimky: "414"
+  stranek: 1
+  radku: 118
+  poznamka: "test nástrojů na řádcích z ocr-pero.tsv (souřadnice a rozměry obrázku viz stranky-trocr-kurrent-xvi-xvii-int8.tsv); TrOCR jistotu nedává; text je strojový, nekontrolovaný"
+- soubor: "ocr-trocr-kurrent.tsv"
+  nastroj: "TrOCR (Hugging Face transformers), spuštěno lokálně na procesoru"
+  model: "dh-unibe/trocr-kurrent (Hugging Face; kurent 19. století)"
+  nastaveni: "řádky z rozložení PERO (obdélník řádku + 4 px okraj), dekódování greedy (num_beams 1), nejvýš 96 tokenů na řádek; dynamická kvantizace int8 (lineární vrstvy)"
+  datum: "2026-11-10"
+  snimky: "414"
+  stranek: 1
+  radku: 118
+  poznamka: "test nástrojů na řádcích z ocr-pero.tsv (souřadnice a rozměry obrázku viz stranky-trocr-kurrent.tsv); TrOCR jistotu nedává; text je strojový, nekontrolovaný"
