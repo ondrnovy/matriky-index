@@ -112,9 +112,6 @@ jobs:
       PR: ${{ github.event.pull_request.number }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       AUTOR: ${{ github.event.pull_request.user.login }}
-      # Loginy ověřených přispěvatelů oddělené čárkou; spravuje je správce v Settings → Secrets and variables →
-      # Actions. Je to secret, ne proměnná, aby se seznam nevypisoval do veřejného logu běhu.
-      OVERENI: ${{ secrets.OVERENI_PRISPEVATELE }}
       RUCNE: >-
         Díky, kontrola prošla bez chyb. Pull request projde správce, namátkou porovná zápisy se skeny a sloučí ho;
         opravovat nic nemusíte.
@@ -122,7 +119,18 @@ jobs:
         Děkujeme! Kontrola prošla bez chyb i bez bodů k posouzení, pull request se sloučil sám. Správce i po sloučení
         namátkou porovnává zápisy se skeny; kdyby něco nesedělo, ozve se tady.
     steps:
+      # Ověření přispěvatelé = proměnná repozitáře OVERENI_PRISPEVATELE (loginy oddělené čárkou, Settings → Secrets and
+      # variables → Actions → Variables). Smí stát jen v této podmínce: v příkazu nebo v env by se seznam vypsal do
+      # veřejného logu běhu. contains() nerozlišuje velikost písmen; druhý tvar dovolí mezeru za čárkou.
+      - name: Ověřený přispěvatel
+        id: overeni
+        if: >-
+          contains(format(',{0},', vars.OVERENI_PRISPEVATELE), format(',{0},', github.event.pull_request.user.login)) ||
+          contains(format(',{0},', vars.OVERENI_PRISPEVATELE), format(', {0},', github.event.pull_request.user.login))
+        run: echo "overeny=1" >> "$GITHUB_OUTPUT"
       - name: Sloučení, nebo předání správci
+        env:
+          OVERENY: ${{ steps.overeni.outputs.overeny }}
         run: |
           repo="$GITHUB_REPOSITORY"
           # Pull requesty správce slučuje on sám.
@@ -138,12 +146,7 @@ jobs:
               gh pr comment "$PR" --repo "$repo" --body-file rucne.md
             fi
           }
-          autor=$(tr '[:upper:]' '[:lower:]' <<< "$AUTOR")
-          overeni=$(tr '[:upper:]' '[:lower:]' <<< "$OVERENI" | tr -d ' ')
-          case ",$overeni," in
-            *",$autor,"*) ;;
-            *) rucne ""; exit 0 ;;
-          esac
+          if [ "$OVERENY" != 1 ]; then rucne ""; exit 0; fi
           # Namátková kontrola: zhruba každý pátý pull request ověřeného přispěvatele projde správce. Volba platí pro
           # celý pull request (pozná se podle komentáře), další push ji znovu nelosuje.
           if grep -qF "$znacka" <<< "$komentare" || [ $((RANDOM % 5)) -eq 0 ]; then
