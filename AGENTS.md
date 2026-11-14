@@ -25,8 +25,12 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
   sezení Claude Code (`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole `effort`); samotné „Claude“ kontrola odmítne.
 - Nová kniha: `kniha.yaml` s poli `archiv`, `kniha`, `nazev`, `url`, `roky`, `farnost`, `obsah`; `mapa`, pokud knihu má
   Mapa matrik.
-- Strojový text z PERO importuj nástrojem `tools/pero_import.py` (doplň `BOOKS` a `EXPORTS`).
-- Cizí řádky nikdy neměň ani nemaž. Jiné čtení = nový řádek nebo oprava přes `tools/opravy.py`.
+- Strojový text z PERO importuj nástrojem `tools/pero_import.py`; popis exportu (`import` s prefixem a dělitelem,
+  položka `ocr` s `export`) patří do `kniha.yaml` knihy, kód neměň ([PERO.md](PERO.md)). Čtení jiným nástrojem
+  nebo modelem (Transkribus, ScribbleSense) přidej jako další `ocr-<cteni>.tsv` vedle stávajícího, nic nepřepisuj.
+- Řádky, které už jsou v `main`, nikdy neměň ani nemaž – cizí ani vlastní. Jiné nebo přesnější čtení = nový řádek
+  nebo oprava přes `tools/opravy.py`.
+- `PREHLED.md` necommituj; po sloučení ho z dat v `main` přegeneruje GitHub Action.
 - Nezapisuj nic mladšího než 100 let (narození, sčítání) nebo 75 let (sňatky, úmrtí) – může jít o žijící lidi.
 - Chybu písaře, kterou dokazují jiné zápisy (matka zapsaná jménem babičky, věk o několik let vedle), zapiš nástrojem
   `tools/vyklad.py` do `vyklad.tsv`; vykládaný zápis i doklady musí být v `precteno.tsv`. Jiný výklad (kdo osoba ve
@@ -35,7 +39,7 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
 
 ## Odeslání
 
-Na konci práce spusť `python tools/kontrola.py` (a `python tools/prehled.py`), commitni změny v `knihy/` a **nabídni
+Na konci práce spusť `python tools/kontrola.py`, commitni změny v `knihy/` a **nabídni
 uživateli, že výsledek pošleš do původního repozitáře** jako pull request. S jeho souhlasem:
 
     gh repo fork --remote            # jen poprvé; vytvoří fork a remote „origin“ na něj, původní repo jako „upstream“
@@ -44,4 +48,7 @@ uživateli, že výsledek pošleš do původního repozitáře** jako pull reque
     gh pr create --repo pe-pan/matriky-index --base main --title "<archiv>/<kniha>: <co bylo přečteno>" --body "<shrnutí>"
 
 Do popisu pull requestu napiš: které knihy a snímky, kolik zápisů, čím se četlo (očima, PERO, model), jistotu a
-výsledek `tools/kontrola.py`. Bez souhlasu uživatele nic neodesílej. Podrobnosti v [CONTRIBUTING.md](CONTRIBUTING.md).
+výsledek `tools/kontrola.py`. Kontrola u pull requestu dá štítek `kontrola-chyby` (oprav), `k-posouzeni` (projde
+správce, opravovat nic netřeba) nebo `kontrola-ok`. Má-li kniha issue „Čtu: <archiv>/<kniha>“ a pull request ji
+dočítá, přidej `Closes #<číslo issue>`; GitHub issue po sloučení zavře sám. Bez souhlasu uživatele nic neodesílej.
+Podrobnosti v [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -7,12 +7,17 @@ roky: "1785–1826"
 obsah: "O česky, tabulkově, po obcích (každý oddíl chronologicky 1785–1826: asi sn. 3–23, 24–47, 49–73, 74–89, 92–126; Ohnišov 1824 = sn. 124, Janov 1797 = sn. 51); snímky 1–126; soubor = snímek; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/f9ac826b-d61c-4270-b416-f20a88bb1417"
 poznamka: "OCR celé knihy ze šedotónových JPEG 2400 px; úzké sloupce tabulky čte PERO špatně; zápisy přečtené očima v precteno.tsv"
+import:
+  prefix: "by144"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "3052565f-a1ce-4d4d-a463-5f9420ae7fa2"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-10"
   export: "vca-bystre-14-4.pagexml.zip"
+  snimky: "1–126"
   stranek: 126
   radku: 19738
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

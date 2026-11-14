@@ -6,12 +6,17 @@ farnost: "Kolín"
 roky: "1788–1821"
 obsah: "N 1788–1821 (sn. 82 = 1818, 91 = 1819, 93 = 1820, 96–101 = 1821); OCR snímky 68–101 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/n-821"
+import:
+  prefix: "n821"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "66a2140f-552f-4972-b395-4d1101451016 (sn. 68–77) + e23ff42b-1cfd-46b9-84f1-3e5a41cb58a7 (sn. 78–101)"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z10-821.pagexml.zip"
+  snimky: "68–101"
   stranek: 34
   radku: 7894
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

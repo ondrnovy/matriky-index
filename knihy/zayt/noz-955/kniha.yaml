@@ -6,12 +6,17 @@ farnost: "Uhlířské Janovice"
 roky: "1800–1839"
 obsah: "N 1804–1839, O 1800/1827–1838, Z 1804–1839 (19 snímků); OCR snímky 3–18 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/noz-955"
+import:
+  prefix: "noz955"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "3c9b00c4-748d-413e-9970-1665b5c2aa5f"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z9-955-kurrent.pagexml.zip"
+  snimky: "3–18"
   stranek: 16
   radku: 3642
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -58,7 +58,8 @@ def main():
         books.append({
             "archiv": d.parent.name, "kniha": d.name, "nazev": meta.get("nazev") or d.name, "url": meta.get("url"),
             "druh": meta.get("druh") or "matrika", "roky": meta.get("roky") or "",
-            "stran": lines(d / "stranky.tsv"), "radku": lines(d / "ocr-pero.tsv"),
+            "stran": len({r.get("snimek") for p in d.glob("stranky*.tsv") for r in rows(p)}),
+            "radku": sum(lines(p) for p in d.glob("ocr-*.tsv")),
             "typy": Counter(r.get("typ") or "J" for r in pre), "ocima": len(pre),
         })
     total = Counter()

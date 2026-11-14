@@ -6,12 +6,17 @@ farnost: "celé Čechy (týdeník, Praha)"
 roky: "1804"
 obsah: "OCR č. 47–52 (24. 11.–29. 12. 1804), str. 185–208; soubor = strana ročníku; IMG_FULL z NDK"
 url: "https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea"
+import:
+  prefix: "kram1804"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "9fa4607b-77db-46dc-930f-d34910174fc0"
   model: "Czech Fraktur Printed"
   datum: "2026-11-02"
   export: "kramerius-1804-1805.pagexml.zip"
+  snimky: "185–208"
   stranek: 24
   radku: 1840
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

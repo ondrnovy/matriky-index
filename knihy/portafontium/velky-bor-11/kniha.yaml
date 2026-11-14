@@ -5,12 +5,17 @@ farnost: "Velký Bor"
 roky: "1746–1771"
 obsah: "Z 1746–1771 (snímky 3–89)"
 url: "https://www.portafontium.eu/register/soap-pn/velky-bor-11"
+import:
+  prefix: "velky-bor-11"
+  delitel: 10
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "f61096eb-8434-4bf0-8567-7e488a5ad40a"
   model: "Czech Handwritten"
   datum: "2026-10-21"
   export: "velky-bor-08-11.zip"
+  snimky: "3–89"
   stranek: 87
   radku: 10754
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

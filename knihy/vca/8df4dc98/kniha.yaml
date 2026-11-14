@@ -4,15 +4,31 @@ nazev: "Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 17
 druh: "matrika"
 farnost: "Nový Hrádek, Slavoňov"
 roky: "1721–1771"
-obsah: "latinsky, souvislý text; N 1751–1771 sn. 100–197 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ 163–166, 1770 ≈ 186–190); O asi sn. 199–260 (1744–1769 ≈ sn. 220–258); Z asi sn. 283–318 (1743–1769); 319 snímků; soubor = snímek; snímek = pořadí snímku v ARON"
+obsah: "latinsky, souvislý text; N 1721–1750 asi sn. 1–99 (1738 ≈ sn. 56, 1747 ≈ 87–89; fol. f ≈ sn. f+5 až f+6 P), N 1751–1771 asi sn. 100–193 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ 163–166, 1770 ≈ 186–190); O sn. 199–258 L (1722–1769, 1744–1769 ≈ sn. 220–258), sňatky 1769–1771 vloženy na sn. 193 R–197 L (fol. 61–64); Z asi sn. 283–318 (1743–1769); 319 snímků; soubor = snímek; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a"
-poznamka: "OCR jen snímky 100–319 ze šedotónových JPEG 2400 px; zápisy přečtené očima v precteno.tsv"
+poznamka: "OCR snímků 1–319 ze šedotónových JPEG 2400 px ve dvou dokumentech PERO; zápisy přečtené očima v precteno.tsv"
+import:
+  prefix: "nh1171"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "b225448f-56c8-422e-8589-f2e2b2c30dfe"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-10"
   export: "vca-novy-hradek-117-1-sn100.pagexml.zip"
+  snimky: "100–319"
   stranek: 220
   radku: 28832
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "aadba446-b0a7-4df8-9cc6-3796925b8243"
+  model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
+  datum: "2026-11-12"
+  export: "vca-novy-hradek-117-1-sn1.pagexml.zip"
+  snimky: "1–99"
+  stranek: 99
+  radku: 10612
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

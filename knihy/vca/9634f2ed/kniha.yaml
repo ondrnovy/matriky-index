@@ -6,12 +6,17 @@ farnost: "Deštné v Orlických horách"
 roky: "1784–1837"
 obsah: "N 5/1784–6/1837 německy, tabulkově, chronologicky pro celou farnost (obec ve sloupci data); snímek 84 = pag. 158–159 (1810); rejstřík N/Z/O 1784–1835 = sign. 24-9; snímky 1–145; soubor = snímek; OCR ze šedotónových JPEG 2400 px – úzké sloupce tabulky čte PERO špatně"
 url: "https://aron.vychodoceskearchivy.cz/apu/9634f2ed-f27b-4902-b935-cc261da19e92"
+import:
+  prefix: "destne245"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "85d892fd-9037-43a3-8887-d2bc20b3bfc5"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-destne-24-5.pagexml.zip"
+  snimky: "1–145"
   stranek: 145
   radku: 60560
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

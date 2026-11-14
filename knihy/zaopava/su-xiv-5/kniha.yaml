@@ -6,12 +6,17 @@ farnost: "Ruda nad Moravou (Bartoňov, Bohdíkov, Bušín/Buschin, Hostice, Jaku
 roky: "1779–1825"
 obsah: "OCR snímky 30–95 (asi 1782–1788; str. 1–181 = všechny obce 1779–1788); latinsky; soubor = snímek; obrázky v polovičním rozlišení (1800 px), šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263"
+import:
+  prefix: "bohdikov5"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "161c8c33-983b-4c9a-87cd-36473e311b18"
   model: "Czech Handwritten"
   datum: "2026-11-02"
   export: "bohdikov-su-xiv-5.pagexml.zip"
+  snimky: "30–95"
   stranek: 66
   radku: 32068
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -6,12 +6,17 @@ farnost: "Kolín"
 roky: "1822–1839"
 obsah: "N 1822–1839 bez rejstříku (sn. 3 = 1822, 7 = 1823, 10 = 1824, 17 = 1825, 18–21 = 1826, 24 = 1827); OCR snímky 3–24 z polovičního rozlišení; soubor = snímek"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/n-822"
+import:
+  prefix: "n822"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "8ae74665-b573-4324-97ed-3d47d157f312 (sn. 3–10) + 3df067ca-c307-4e70-ba49-6dc97a957640 (sn. 11–24)"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-06"
   export: "z10-822.pagexml.zip"
+  snimky: "3–24"
   stranek: 22
   radku: 6199
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

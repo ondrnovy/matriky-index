@@ -6,12 +6,17 @@ farnost: "Ruda nad Moravou (Bartoňov, Bohdíkov, Bušín, Hostice, Jakubovice, 
 roky: "1779–1825"
 obsah: "str. 1–47 = všechny obce 1779–1788, od 1789 po obcích; OCR snímky 1–35 (1779–1788); soubor = snímek; obrázky v polovičním rozlišení, šedotónové"
 url: "https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263"
+import:
+  prefix: "ruda14"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "2d56f6dc-b89c-49a9-9e93-099de7a9306b"
   model: "Czech Handwritten"
   datum: "2026-11-02"
   export: "ruda-su-xiv-4-14.pagexml.zip"
+  snimky: "1–35"
   stranek: 35
   radku: 13361
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -6,12 +6,77 @@ farnost: "Velký Uhřínov"
 roky: "1784–1837"
 obsah: "O 1784–1837; snímky 1–39 (sn. 2–24 chronologicky 1784–1837, sn. 25–39 podle letopočtů v OCR znovu 1784–1795 – jiná řada?); soubor = snímek; OCR ze šedotónových JPEG 2400 px"
 url: "https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643"
+import:
+  prefix: "uhrinov1712797"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "22584668-c138-4a53-a0e9-b6d76bc57563"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-smola-o-destne-rokytnice-uhrinov-nmnm.pagexml.zip"
+  snimky: "1–39"
   stranek: 39
   radku: 7634
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-transkribus-czech-m1.tsv"
+  nastroj: "Transkribus (app.transkribus.org), Quick Text Recognition"
+  dokument: "20141020"
+  model: "Transkribus Czech Handwriting M1 (model 263129)"
+  nastaveni: "rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px (Opočno, Uhřínov) a 2600 px šedotónově (Horažďovice)"
+  datum: "2026-11-10"
+  export: "export_job_31977240.zip"
+  snimky: "10"
+  stranek: 1
+  radku: 181
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-czech-m1.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-transkribus-german-giant.tsv"
+  nastroj: "Transkribus (app.transkribus.org), Quick Text Recognition"
+  dokument: "20141141"
+  model: "The German Giant I (model 50870)"
+  nastaveni: "rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px (Opočno, Uhřínov) a 2600 px šedotónově (Horažďovice)"
+  datum: "2026-11-10"
+  export: "export_job_31977240.zip"
+  snimky: "10"
+  stranek: 1
+  radku: 181
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-german-giant.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-transkribus-german-hw-m1.tsv"
+  nastroj: "Transkribus (app.transkribus.org), Quick Text Recognition"
+  dokument: "20141159"
+  model: "Transkribus German Handwriting M1 (model 35909)"
+  nastaveni: "rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px (Opočno, Uhřínov) a 2600 px šedotónově (Horažďovice)"
+  datum: "2026-11-10"
+  export: "export_job_31977240.zip"
+  snimky: "10"
+  stranek: 1
+  radku: 181
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-german-hw-m1.tsv); text je strojový, nekontrolovaný"
+- soubor: "ocr-trocr-kurrent-xvi-xvii.tsv"
+  nastroj: "TrOCR (Hugging Face transformers), spuštěno lokálně na procesoru"
+  model: "dh-unibe/trocr-kurrent-XVI-XVII (Hugging Face)"
+  nastaveni: "řádky z rozložení PERO (obdélník řádku + 4 px okraj), dekódování greedy (num_beams 1), nejvýš 96 tokenů na řádek; float32"
+  datum: "2026-11-10"
+  snimky: "10"
+  stranek: 1
+  radku: 311
+  poznamka: "test nástrojů na řádcích z ocr-pero.tsv (souřadnice a rozměry obrázku viz stranky-trocr-kurrent-xvi-xvii.tsv); TrOCR jistotu nedává; text je strojový, nekontrolovaný"
+- soubor: "ocr-trocr-kurrent-xvi-xvii-int8.tsv"
+  nastroj: "TrOCR (Hugging Face transformers), spuštěno lokálně na procesoru"
+  model: "dh-unibe/trocr-kurrent-XVI-XVII (Hugging Face)"
+  nastaveni: "řádky z rozložení PERO (obdélník řádku + 4 px okraj), dekódování greedy (num_beams 1), nejvýš 96 tokenů na řádek; dynamická kvantizace int8 (lineární vrstvy)"
+  datum: "2026-11-10"
+  snimky: "10"
+  stranek: 1
+  radku: 311
+  poznamka: "test nástrojů na řádcích z ocr-pero.tsv (souřadnice a rozměry obrázku viz stranky-trocr-kurrent-xvi-xvii-int8.tsv); TrOCR jistotu nedává; text je strojový, nekontrolovaný"
+- soubor: "ocr-trocr-kurrent.tsv"
+  nastroj: "TrOCR (Hugging Face transformers), spuštěno lokálně na procesoru"
+  model: "dh-unibe/trocr-kurrent (Hugging Face; kurent 19. století)"
+  nastaveni: "řádky z rozložení PERO (obdélník řádku + 4 px okraj), dekódování greedy (num_beams 1), nejvýš 96 tokenů na řádek; dynamická kvantizace int8 (lineární vrstvy)"
+  datum: "2026-11-10"
+  snimky: "10"
+  stranek: 1
+  radku: 311
+  poznamka: "test nástrojů na řádcích z ocr-pero.tsv (souřadnice a rozměry obrázku viz stranky-trocr-kurrent.tsv); TrOCR jistotu nedává; text je strojový, nekontrolovaný"

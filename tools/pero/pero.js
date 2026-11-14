@@ -5,7 +5,6 @@
 // „claude upload“), který bere obrázky i balíky *.pack z tools/pero/balik.py a předá je nahrávači stránky. Vstup
 // zůstává stejný, takže nástroje typu file_upload ho mohou plnit opakovaně.
 function pripravNahravani() {
-  const dz = Dropzone.instances[0];
   window.__nahrano = window.__nahrano || 0;
   if (document.getElementById("clup")) return "vstup už existuje";
   const inp = document.createElement("input");
@@ -14,7 +13,13 @@ function pripravNahravani() {
   inp.id = "clup";
   inp.setAttribute("aria-label", "claude upload");
   inp.style.cssText = "position:fixed;left:5px;top:5px;z-index:99999;width:200px;height:30px";
+  // Nahrávač stránky (Dropzone) vzniká až po načtení stránky, proto se hledá teprve při výběru souborů.
   inp.addEventListener("change", async () => {
+    const dz = Dropzone.instances[0];
+    if (!dz) {
+      window.__chyba = "nahrávač stránky ještě není připravený, vyberte soubory znovu";
+      return;
+    }
     const files = [...inp.files];
     inp.value = "";
     for (const f of files) {
@@ -68,7 +73,7 @@ async function nahrajZUrl(seznam) {
 
 // Na libovolné stránce PERO po dokončení OCR: složí PAGE XML všech stran dokumentu do jednoho souboru (PERO u velkých
 // dokumentů na vlastní export odpovídá chybou 504) a nabídne ho ke stažení jako <nazev>.pagexml.txt. Lokálně ho
-// zabalit do <nazev>.pagexml.zip pro tools/pero_import.py (název = klíč v EXPORTS).
+// zabalit do <nazev>.pagexml.zip pro tools/pero_import.py (název = `export` v položce ocr v kniha.yaml).
 async function exportuj(dokument, nazev) {
   const h = await (await fetch("/ocr/show_results/" + dokument)).text();
   const d = new DOMParser().parseFromString(h, "text/html");

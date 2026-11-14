@@ -7,12 +7,17 @@ roky: "1784–1834"
 obsah: "O a index O, Pohoří, Puličky, Semechnice, Trnov …, tabulkově česky, po obcích (záložky Pohoří, Puličky, Semechnice); rejstřík ženichů na konci (sn. 90 L = M); snímky 1–110; soubor = snímek; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/ab67b4df-8c81-4421-97bc-508551f5366d"
 poznamka: "OCR celé knihy ze šedotónových JPEG 2400 px; zápisy přečtené očima v precteno.tsv"
+import:
+  prefix: "opocno12011"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "f1f63e66-3c2f-45c8-8781-74a33a4528b1"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
   export: "vca-opocno-120-11.pagexml.zip"
+  snimky: "1–110"
   stranek: 110
   radku: 19165
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

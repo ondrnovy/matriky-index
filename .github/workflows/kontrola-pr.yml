@@ -1,10 +1,13 @@
 # Kontrola dat pull requestu. Běží s kódem a právy z main a z pull requestu bere jen data; nic z PR se nespouští,
 # proto nepotřebuje ruční povolení ani u cizích forků. Token pro komentář a štítek dostane až poslední krok.
 # Výrazy ${{ }} se v příkazech používají jen pro čísla a hashe; text z PR (název, větev) do příkazů nepatří.
+#
+# Štítek: kontrola-chyby (opraví autor), k-posouzeni (bez chyb, projde správce), kontrola-ok. Pull request
+# s kontrola-ok se sloučí sám, je-li autor mezi ověřenými přispěvateli a nevybere ho namátková kontrola.
 name: Kontrola pull requestu
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, ready_for_review]
 permissions:
   contents: read
   issues: write
@@ -15,6 +18,10 @@ concurrency:
 jobs:
   kontrola:
     runs-on: ubuntu-latest
+    outputs:
+      kod: ${{ steps.kontrola.outputs.kod }}
+      posoudit: ${{ steps.kontrola.outputs.posoudit }}
+      jen_data: ${{ steps.kontrola.outputs.jen_data }}
     env:
       PR: ${{ github.event.pull_request.number }}
       BASE: ${{ github.event.pull_request.base.sha }}
@@ -36,10 +43,12 @@ jobs:
           git cat-file -e "$HEAD_SHA^{commit}"
           # Symbolický odkaz nebo submodul by kontrolu nechal číst soubory mimo repozitář.
           if git diff --raw "$BASE...$HEAD_SHA" | awk '{print $2}' | grep -qE '^(120000|160000)$'; then
-            printf 'CHYBA: pull request přidává symbolický odkaz nebo submodul\nchyb: 1, varování: 0\n' > vysledek.txt
+            printf 'CHYBA: pull request přidává symbolický odkaz nebo submodul\nchyb: 1, k posouzení: 0, varování: 0\n' \
+              > vysledek.txt
             echo "kod=1" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          # Nezávisle na kontrole: samo se smí sloučit jen to, co mění výhradně data.
           if git diff --name-only "$BASE...$HEAD_SHA" | grep -qv '^knihy/'; then jen_data=0; else jen_data=1; fi
           echo "jen_data=$jen_data" >> "$GITHUB_OUTPUT"
           git worktree add --detach ../pr "$HEAD_SHA"
@@ -48,34 +57,103 @@ jobs:
           set +e
           (cd ../pr && python -I tools/kontrola.py --zmeny "$BASE") > vysledek.txt 2>&1
           echo "kod=$?" >> "$GITHUB_OUTPUT"
+          posoudit=$(sed -n 's/^chyb: [0-9]*, k posouzení: \([0-9]*\),.*/\1/p' vysledek.txt | tail -n 1)
+          echo "posoudit=${posoudit:-neznámo}" >> "$GITHUB_OUTPUT"
           cat vysledek.txt
       - name: Komentář a štítek
         if: always() && steps.kontrola.outputs.kod != ''
         env:
           GH_TOKEN: ${{ github.token }}
           KOD: ${{ steps.kontrola.outputs.kod }}
+          POSOUDIT: ${{ steps.kontrola.outputs.posoudit }}
           JEN_DATA: ${{ steps.kontrola.outputs.jen_data }}
         run: |
           python -I tools/kontrola_komentar.py vysledek.txt "$KOD" "$HEAD_SHA" > komentar.md
           cat komentar.md >> "$GITHUB_STEP_SUMMARY"
           repo="repos/$GITHUB_REPOSITORY"
           gh label create kontrola-ok --repo "$GITHUB_REPOSITORY" --color 0E8A16 --force \
-            --description "Mění jen data a kontrola je bez chyb"
+            --description "Mění jen data, kontrola je bez chyb a bez bodů k posouzení"
+          gh label create k-posouzeni --repo "$GITHUB_REPOSITORY" --color FBCA04 --force \
+            --description "Kontrola je bez chyb, pull request projde správce"
           gh label create kontrola-chyby --repo "$GITHUB_REPOSITORY" --color D93F0B --force \
             --description "Kontrola dat hlásí chyby"
-          stitek=""
-          if [ "$KOD" != 0 ]; then stitek=kontrola-chyby; elif [ "$JEN_DATA" = 1 ]; then stitek=kontrola-ok; fi
-          for s in kontrola-ok kontrola-chyby; do
+          if [ "$KOD" != 0 ]; then stitek=kontrola-chyby
+          elif [ "$POSOUDIT" = 0 ] && [ "$JEN_DATA" = 1 ]; then stitek=kontrola-ok
+          else stitek=k-posouzeni; fi
+          for s in kontrola-ok k-posouzeni kontrola-chyby; do
             if [ "$s" != "$stitek" ]; then gh api -X DELETE "$repo/issues/$PR/labels/$s" --silent 2>/dev/null || true; fi
           done
-          if [ -n "$stitek" ]; then gh api "$repo/issues/$PR/labels" -f "labels[]=$stitek" --silent; fi
-          # Jeden komentář na PR: založí se při první chybě a dál se jen přepisuje.
+          gh api "$repo/issues/$PR/labels" -f "labels[]=$stitek" --silent
+          # Jeden komentář na PR: založí se při první chybě nebo prvním bodu k posouzení a dál se jen přepisuje.
           id=$(gh api "$repo/issues/$PR/comments" --paginate --jq \
             '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- kontrola-pr -->"))) | .id' \
             | tail -n 1)
           if [ -n "$id" ]; then
             gh api -X PATCH "$repo/issues/comments/$id" -F body=@komentar.md --silent
-          elif [ "$KOD" != 0 ]; then
+          elif [ "$stitek" != kontrola-ok ]; then
             gh api "$repo/issues/$PR/comments" -F body=@komentar.md --silent
           fi
           [ "$KOD" = 0 ]
+  slouceni:
+    needs: kontrola
+    if: >-
+      needs.kontrola.outputs.kod == '0' && needs.kontrola.outputs.posoudit == '0' &&
+      needs.kontrola.outputs.jen_data == '1' && !github.event.pull_request.draft &&
+      github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    # Bez checkoutu: job z pull requestu nic nečte ani nespouští, jen ho sloučí přesně v kontrolovaném commitu.
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.pull_request.number }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      AUTOR: ${{ github.event.pull_request.user.login }}
+      RUCNE: >-
+        Díky, kontrola prošla bez chyb. Pull request projde správce, namátkou porovná zápisy se skeny a sloučí ho;
+        opravovat nic nemusíte.
+      DIKY: >-
+        Děkujeme! Kontrola prošla bez chyb i bez bodů k posouzení, pull request se sloučil sám. Správce i po sloučení
+        namátkou porovnává zápisy se skeny; kdyby něco nesedělo, ozve se tady.
+    steps:
+      # Ověření přispěvatelé = proměnná repozitáře OVERENI_PRISPEVATELE (loginy oddělené čárkou, Settings → Secrets and
+      # variables → Actions → Variables). Smí stát jen v této podmínce: v příkazu nebo v env by se seznam vypsal do
+      # veřejného logu běhu. contains() nerozlišuje velikost písmen; druhý tvar dovolí mezeru za čárkou.
+      - name: Ověřený přispěvatel
+        id: overeni
+        if: >-
+          contains(format(',{0},', vars.OVERENI_PRISPEVATELE), format(',{0},', github.event.pull_request.user.login)) ||
+          contains(format(',{0},', vars.OVERENI_PRISPEVATELE), format(', {0},', github.event.pull_request.user.login))
+        run: echo "overeny=1" >> "$GITHUB_OUTPUT"
+      - name: Sloučení, nebo předání správci
+        env:
+          OVERENY: ${{ steps.overeni.outputs.overeny }}
+        run: |
+          repo="$GITHUB_REPOSITORY"
+          # Pull requesty správce slučuje on sám.
+          if [ "$AUTOR" = "$GITHUB_REPOSITORY_OWNER" ]; then exit 0; fi
+          znacka="<!-- rucni-kontrola -->"
+          komentare=$(gh api "repos/$repo/issues/$PR/comments" --paginate \
+            --jq '.[] | select(.user.login == "github-actions[bot]") | .body')
+          rucne() {  # $1 = skrytý důvod pro pozdější vyhodnocení pravidel
+            gh api -X DELETE "repos/$repo/issues/$PR/labels/kontrola-ok" --silent 2>/dev/null || true
+            gh api "repos/$repo/issues/$PR/labels" -f "labels[]=k-posouzeni" --silent
+            if ! grep -qF "$znacka" <<< "$komentare"; then
+              printf '%s\n%s\n%s\n' "$znacka" "$1" "$RUCNE" > rucne.md
+              gh pr comment "$PR" --repo "$repo" --body-file rucne.md
+            fi
+          }
+          if [ "$OVERENY" != 1 ]; then rucne ""; exit 0; fi
+          # Namátková kontrola: zhruba každý pátý pull request ověřeného přispěvatele projde správce. Volba platí pro
+          # celý pull request (pozná se podle komentáře), další push ji znovu nelosuje.
+          if grep -qF "$znacka" <<< "$komentare" || [ $((RANDOM % 5)) -eq 0 ]; then
+            rucne "<!-- pravidla: namatkova-kontrola -->"
+            exit 0
+          fi
+          gh pr merge "$PR" --repo "$repo" --merge --match-head-commit "$HEAD_SHA"
+          gh pr comment "$PR" --repo "$repo" --body "$DIKY"
+          # Sloučení tokenem workflow nespustí workflow na push do main; přehled, web a kontrolu indexu spustí tady.
+          for w in prehled.yml pages.yml kontrola.yml; do gh workflow run "$w" --repo "$repo" --ref main; done

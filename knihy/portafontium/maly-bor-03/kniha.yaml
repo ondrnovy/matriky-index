@@ -5,12 +5,17 @@ farnost: "Malý Bor"
 roky: "1704–1726"
 obsah: "N 1704–1726 (snímky 3–69), O (70–85), Z (86–100)"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-03"
+import:
+  prefix: "maly-bor-03"
+  delitel: 10
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "d6e5e828-1460-4523-8ec1-891a6cad4f26"
   model: "Czech Handwritten"
   datum: "2026-10-21"
   export: "maly-bor-03.zip"
+  snimky: "3–100"
   stranek: 98
   radku: 8664
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

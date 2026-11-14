@@ -17,19 +17,17 @@ vyrábí `python tools/web.py` (GitHub Action `pages.yml` po každém pushi do `
 `python -m http.server -d _site`). U zápisu přečteného víckrát (stejný snímek, datum, typ a obec) ukazuje nejnovější čtení
 a starší na rozkliknutí.
 
-Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), generuje `python tools/prehled.py`.
+Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), po každé změně dat v `main` ho
+přegeneruje GitHub Action (`tools/prehled.py`).
 
 Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).
 
 ## Kdo četl
 
-Sloupec `cetl` v `precteno.tsv` uvádí u jazykového modelu jeho identifikátor a nastavení effortu (`claude-sonnet-5-5/xhigh`),
-aby šlo zápisy přečtené slabším modelem nebo s nižším effortem najít a přečíst znovu lepším. Na kvalitu čtení má vliv
-i rozlišení skenu (1600 px vs. výřez 4000 px); to uvádí sloupec `ostatni`, pokud je známé.
-
-Řádky z let 2026-10 a 2026-11 dostaly model a effort dodatečně (`precteno.tsv` 2026-11-04, `opravy.tsv` 2026-11-05)
-podle záznamů sezení Claude Code, kde je u každého dotazu uložen model i effort; dřív v nich stálo jen `agent` nebo
-`Claude`. Stejné pravidlo platí pro sloupec `kdo` v `opravy.tsv` a `vyklad.tsv`.
+Sloupec `cetl` v `precteno.tsv` (a stejně `kdo` v `opravy.tsv` a `vyklad.tsv`) uvádí u jazykového modelu jeho
+identifikátor a nastavení effortu (`claude-sonnet-5-5/xhigh`), aby šlo zápisy přečtené slabším modelem nebo s nižším
+effortem najít a přečíst znovu lepším. Na kvalitu čtení má vliv i rozlišení skenu (1600 px vs. výřez 4000 px); to
+uvádí sloupec `ostatni`, pokud je známé.
 
 Id modelu se píše, jak ho uvádí API (`claude-opus-5-5`, `gpt-5.2`, `o3`, `gemini-2.5-pro`, `grok-4`). Effort je
 hodnota, jak ji nástroj nastavuje: `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, `max` (Anthropic, OpenAI,
@@ -53,16 +51,20 @@ nikdo další. Stačí pull request s novými řádky v `knihy/<archiv>/<kniha>/
 knihy/<archiv>/<kniha>/
   kniha.yaml      popis knihy: archiv, název, farnost, roky, obsah (které snímky jsou N/O/Z), odkaz na portál,
                   volitelně mapa (odkaz na mapu knihy v Mapě matrik, github.com/ondrnovy/mapa-matrik), jak se
-                  z čísla souboru dostat na snímek, a pro každé OCR: nástroj, dokument v PERO, model, datum
-  stranky.tsv     zpracované stránky: snímek, soubor, rozměry obrázku, počet řádků
-  ocr-pero.tsv    strojový text: snímek, soubor, strana (L/R), řádek, obdélník x/y/šířka/výška v pixelech obrázku,
-                  jistota (0–1), text – nekontrolovaný, s chybami
+                  z čísla souboru dostat na snímek, a seznam ocr – u každého strojového čtení soubor, nástroj,
+                  dokument, model, nastavení (rozbor rozložení, jazykový model, rozlišení), datum, snímky
+  ocr-pero.tsv    strojový text z PERO: snímek, soubor, strana (L/R), řádek, obdélník x/y/šířka/výška v pixelech
+                  obrázku, jistota (0–1), text – nekontrolovaný, s chybami
+  stranky.tsv     stránky čtení ocr-pero.tsv: snímek, soubor, rozměry nahraného obrázku, počet řádků
+  ocr-<cteni>.tsv,  další strojová čtení téže knihy (jiný nástroj nebo model, např. ocr-transkribus-czech-m1.tsv,
+  stranky-<cteni>.tsv   ocr-scribblesense.tsv) ve stejném formátu; každé čtení má vlastní dvojici souborů
   precteno.tsv    zápisy přečtené očima (formát níže)
   opravy.tsv      opravy strojového čtení (viz Vrstvy a opravy)
   vyklad.tsv      chyby písaře doložené jinými zápisy (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
 tools/
-  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů); běží u každého pull requestu
+  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů, u pull requestu i body
+                  k posouzení); běží u každého pull requestu
   hledej.py       volné hledání slova ve všech knihách (precteno, výklady, OCR s opravami; Levenshtein na začátku slova)
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv
@@ -112,14 +114,22 @@ v knize není. Zásah se ověřuje na skenu (snímek a strana jsou ve výpisu).
 
 Celý postup (skeny podle archivu, nahrání do PERO, rozbor rozložení, volba modelu, export a import) je v
 [PERO.md](PERO.md). Zkráceně: skeny do PERO (Porta fontium a Acta Publica přímo z prohlížeče, ostatní z disku),
-„Handwritten layout“, OCR „Kurrent (German, Czech)“ pro kurent, „Czech Handwritten“ pro latinku, export, doplnit
-`BOOKS` a `EXPORTS` v `tools/pero_import.py` a spustit `python tools/pero_import.py <export.zip>`.
+„Handwritten layout“, OCR „Kurrent (German, Czech)“ pro kurent, „Czech Handwritten“ pro latinku, export, popis
+exportu do `kniha.yaml` knihy a `python tools/pero_import.py <export.zip>`. Import čte vše z dat, do kódu se nesahá.
+
+Strojový text z jiného nástroje (Transkribus, ScribbleSense) se importuje stejně, z exportu PAGE XML: položka v `ocr`
+má vlastní `soubor` (`ocr-<cteni>.tsv`), `nastroj`, `model` a `nastaveni`; když export míchá víc modelů, má každý
+model svou položku s `model_id`. Vznikne `ocr-<cteni>.tsv` a `stranky-<cteni>.tsv` vedle stávajících čtení.
+Česká kurzíva 17.–18. století: Transkribus „Czech Handwriting M1“ čte jména zhruba dvakrát lépe než PERO; latinu a
+kurent PERO stejně dobře nebo lépe.
 
 ## Vrstvy a opravy
 
 Původní data se nepřepisují, opravy a výklady se přidávají zvlášť:
 
-1. `ocr-pero.tsv` – strojový text, nemění se (při lepším OCR se vymění celý).
+1. `ocr-pero.tsv` a `ocr-<cteni>.tsv` – strojový text, nemění se. Každé čtení (nástroj a model) má vlastní soubor;
+   lepší čtení se přidá vedle, starší se nemaže – každý nástroj je silný na jiné písmo. Soubor se přepíše jen celý
+   novým exportem téhož čtení.
 2. `opravy.tsv` – opravy strojového čtení: co je na skenu opravdu napsáno (PERO „Plohar“, napsáno „Ploczar“). Oprava je
    ukotvená obdélníkem řádku na skenu, ne jeho číslem, takže přežije nové OCR. Přidává se nástrojem:
 

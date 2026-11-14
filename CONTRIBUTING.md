@@ -15,7 +15,8 @@ klonu. Přečtené zápisy se hodí, i když se netýkají vaší rodiny – pr�
    zvolte „Propose changes“ – GitHub sám vytvoří fork a pull request.
 
 Než začnete číst celou knihu, podívejte se do [PREHLED.md](PREHLED.md) a `python tools/hledej.py`, jestli už přečtená
-není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu“), ať ji nečte někdo další souběžně.
+není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu“), ať ji nečte někdo další souběžně. Do popisu
+pull requestu, který knihu dočte, napište `Closes #<číslo issue>`; GitHub issue po sloučení zavře sám.
 
 ## Co se přidává
 
@@ -23,7 +24,9 @@ není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu�
   [README](README.md#precteno-tsv--zápisy-přečtené-očima). Do `cetl` napište, kdo četl a kdy, např.
   `Jan Novák 2026-11-05`; s jazykovým modelem i jeho id a effort, např.
   `Jan Novák + claude-opus-5-5/xhigh 2026-11-05` (viz [Kdo četl](README.md#kdo-četl)).
-- `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md).
+- `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md). Strojový text z jiného
+  nástroje nebo modelu (Transkribus, ScribbleSense) jako další čtení `ocr-<cteni>.tsv` a `stranky-<cteni>.tsv` vedle
+  něj – stávající čtení se nemaže ani nepřepisuje; nástroj, model, nastavení a snímky do `ocr` v `kniha.yaml`.
 - `opravy.tsv` – opravy strojového čtení, nástrojem `tools/opravy.py`.
 - `vyklad.tsv` – chyby písaře (špatné jméno, věk, vztah), které dokazují jiné zápisy v indexu, nástrojem
   `tools/vyklad.py`; formát a pravidla v [README](README.md#vykladtsv--chyby-písaře).
@@ -37,8 +40,10 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 
 ## Pravidla
 
-- **Jen přidávat.** Cizí řádky se nemažou ani nepřepisují. Nesouhlasíte se čtením? Přidejte vlastní řádek k témuž zápisu
-  nebo opravu do `opravy.tsv`; obě čtení zůstanou vedle sebe a rozhodne sken.
+- **Jen přidávat.** Řádky se nemažou ani nepřepisují – cizí ani vlastní, které už jsou v `main`. Nesouhlasíte se čtením
+  nebo jste ho zpřesnili? Přidejte nový řádek k témuž zápisu nebo opravu do `opravy.tsv`; čtení zůstanou vedle sebe a
+  rozhodne sken.
+- **`PREHLED.md` neměňte.** Po sloučení ho z dat v `main` přegeneruje GitHub Action; v pull requestech by se hádal.
 - **Žijící lidé.** Matriky narozených jsou veřejné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
   301/2000 Sb.); stejnou lhůtu držíme u sčítání lidu. Mladší zápisy kontrola odmítne.
 - **Ohleduplnost k archivům.** Stahujte jen, co potřebujete, a přes `tools/scan/slusne.py` (viz
@@ -47,12 +52,21 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 
 ## Kontrola a schválení
 
-1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main` (formát, povinná pole, lhůty,
-   zákaz mazání; u přidaných řádků i tvar data, jistota a posunuté sloupce). Výsledek uvidíte u pull requestu: štítek
-   `kontrola-ok` nebo `kontrola-chyby` a při chybách komentář s výpisem. Totéž si spusťte předem.
-2. Správce projde změny a namátkou porovná několik řádků se skeny, i u přispěvatelů, kteří už přispěli. Chybné čtení
-   není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
-3. Po sloučení se kniha objeví v [PREHLED.md](PREHLED.md).
+1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main`; totéž si spusťte předem. Výsledek
+   uvidíte u pull requestu jako štítek, při chybách nebo bodech k posouzení i s komentářem a výpisem:
+   - `kontrola-chyby` – formát, povinná pole, lhůty, smazané nebo změněné řádky, soubor, který do indexu nepatří (sken,
+     `PREHLED.md`), e-mail nebo cesta na disk, kniha, která už v indexu je pod jinou složkou. Opravte a pošlete změny
+     do téže větve, kontrola proběhne znovu.
+   - `k-posouzeni` – bez chyb, jen pár míst nechává kontrola na správci: rok mimo roky knihy, snímek za koncem knihy,
+     slovo příbuzenství nebo ztotožnění v `osoby` či `ostatni`, nové jméno v `cetl`, hodně nízké jistoty, víc než 150
+     řádků, strojové čtení, oprava nebo výklad, změna `kniha.yaml` existující knihy, nový archiv, soubor mimo `knihy/`.
+     Opravovat nic nemusíte, správce pull request projde a sloučí. Tato pravidla jsou zatím přísná a podle zkušeností
+     se budou povolovat.
+   - `kontrola-ok` – bez chyb i bez bodů k posouzení.
+2. Správce pull request projde a namátkou porovná několik řádků se skeny. U ověřených přispěvatelů se pull request se
+   štítkem `kontrola-ok` může sloučit sám; i takové správce namátkou vybírá k porovnání, před sloučením i po něm.
+   Chybné čtení není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
+3. Po sloučení se kniha sama objeví v [PREHLED.md](PREHLED.md).
 
 ## Licence
 

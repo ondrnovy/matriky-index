@@ -6,12 +6,17 @@ farnost: "Žinkovy"
 roky: "1683–1715"
 obsah: "N (snímky 4–128), O (129–155), Z (156–167); OCR jen N a O"
 url: "https://www.portafontium.eu/register/soap-pn/zinkovy-02"
+import:
+  prefix: "zinkovy-02"
+  delitel: 10
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "ee840a16-1ae5-4bb0-ac76-5a9217a1edbd"
   model: "Czech Handwritten"
   datum: "2026-11-06"
   export: "zinkovy-02-czh.pagexml.zip"
+  snimky: "4–155"
   stranek: 152
   radku: 13262
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

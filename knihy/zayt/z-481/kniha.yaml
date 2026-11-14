@@ -6,12 +6,17 @@ farnost: "Luže"
 roky: "1840–1873"
 obsah: "Z Hroubovice 1840–1873; OCR snímky 3–52; soubor = snímek; oříznuté, šedotónové; sn. 3–11 neotočené, 12–52 otočené o 90° (soubor -r)"
 url: "https://zayt.org/collections/jewish-control-registers-1780-1911/z-481"
+import:
+  prefix: "z481"
+  delitel: 1
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "8b22ff4d-4bfb-48ce-a789-7644f374dc32"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-02"
   export: "kurrent-2741-2745-481.pagexml.zip"
+  snimky: "3–52"
   stranek: 50
   radku: 7731
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

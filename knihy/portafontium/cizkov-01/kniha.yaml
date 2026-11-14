@@ -6,12 +6,17 @@ farnost: "Čížkov"
 roky: "1701–1720"
 obsah: "N 1701–1720 (soubory 0031–0491), O (0501–0621); OCR jen N a O; snímek = číslo souboru // 10"
 url: "https://www.portafontium.eu/register/soap-pn/cizkov-01"
+import:
+  prefix: "cizkov-01"
+  delitel: 10
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "126567d4-cec4-41c6-a4aa-54ca8dd468e9"
   model: "Czech Handwritten"
   datum: "2026-11-06"
   export: "cizkov-01-czh.pagexml.zip"
+  snimky: "3–62"
   stranek: 61
   radku: 4999
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

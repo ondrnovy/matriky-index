@@ -7,12 +7,17 @@ roky: "1667–1689"
 obsah: "N 1667–1676 (snímky 3–44), O 1667–1676 (45–57), N 1677–1689 (58–108), O 1677–1689 (109–126), Z 1677–1689 (128–142); OCR jen N 1667–1676 a Z 1677–1689"
 url: "https://www.portafontium.eu/register/soap-pn/kasejovice-03"
 poznamka: "zápisy přečtené očima: N 0030–0440 (1667–1676) a 0580–1080 (1677–1689), O 0450–0570 a 1090–1260 (1667–1689); příjmení většinou čtena ze snímků 1600 px, proto nízká jistota"
+import:
+  prefix: "kasejovice-03"
+  delitel: 10
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "9345001a-cea4-433e-a3c7-4e68d4313678"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-04"
   export: "kasejovice-03-n1667-z1677.pagexml.zip"
+  snimky: "3–44, 128–142"
   stranek: 57
   radku: 4389
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

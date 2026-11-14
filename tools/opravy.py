@@ -18,6 +18,11 @@ REPO = Path(__file__).resolve().parent.parent
 FIELDS = ["snimek", "soubor", "strana", "x", "y", "sirka", "vyska", "puvodne", "spravne", "kdo", "jistota"]
 
 
+
+def ocr_files(folder):
+    """Every machine reading of a book: ocr-pero.tsv first, then ocr-<cteni>.tsv of other tools and models."""
+    return sorted(folder.glob("ocr-*.tsv"), key=lambda p: (p.name != "ocr-pero.tsv", p.name))
+
 def book_dir(book):
     found = [p for p in REPO.glob(f"knihy/*/{book}") if p.is_dir()]
     if not found:
@@ -75,7 +80,7 @@ def main():
     args = parser.parse_args()
     folder = book_dir(args.kniha)
     snimek, strana = args.snimek[:-1], args.snimek[-1].upper()
-    line = next((r for r in read_tsv(folder / "ocr-pero.tsv")
+    line = next((r for p in ocr_files(folder) for r in read_tsv(p)
                  if r["snimek"] == snimek and r["strana"] == strana and int(r["radek"]) == args.radek), None)
     if line is None:
         sys.exit(f"řádek {args.radek} na snímku {args.snimek} v OCR není")

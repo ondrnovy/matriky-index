@@ -6,12 +6,17 @@ farnost: "Blovice"
 roky: "1688–1720"
 obsah: "N 1688–1720 (snímky 3–137)"
 url: "https://www.portafontium.eu/register/soap-pn/blovice-02"
+import:
+  prefix: "blovice-02"
+  delitel: 10
 ocr:
-- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
   dokument: "53844fe1-8a74-44ce-b6de-9e9e0695ce82"
   model: "Czech Handwritten"
   datum: "2026-11-06"
   export: "blovice-02-czh.pagexml.zip"
+  snimky: "3–137"
   stranek: 135
   radku: 9872
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
